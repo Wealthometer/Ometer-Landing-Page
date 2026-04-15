@@ -723,3 +723,28 @@
     }
 
     .cmd .p {
+      color: var(--slate);
+      margin-right: 6px;
+    }
+   
+    .cta-band {
+      border-top: 1px solid var(--border);
+      padding: 120px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-band::before {
+      content: 'OMETER';
+      position: absolute;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22vw;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--border);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      letter-spacing: .04em;
+      white-space: nowrap;
