@@ -352,3 +352,56 @@ nav.stuck {
 .ch-content pre .lime {
   color: var(--lime);
 }
+
+/* DECISION TABLE */
+.decision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin: 20px 0;
+}
+.d-card {
+  background: var(--ink2);
+  border: 1px solid var(--border);
+  padding: 20px 18px;
+}
+.d-q {
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--slate);
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+.d-a {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.88rem;
+  color: var(--white);
+  line-height: 1.6;
+}
+.d-a b {
+  color: var(--lime);
+  font-weight: 600;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+  margin: 24px 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+.tl-item::before {
+  content: "";
+  position: absolute;
