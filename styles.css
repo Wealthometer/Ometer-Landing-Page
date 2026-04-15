@@ -623,3 +623,28 @@
       align-items: center;
     }
 
+    .demo-text h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 4vw, 3.8rem);
+      letter-spacing: .02em;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .demo-text h2 span {
+      color: var(--lime);
+    }
+
+    .demo-text p {
+      color: var(--slate);
+      line-height: 1.8;
+      font-size: .95rem;
+      margin-bottom: 16px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
