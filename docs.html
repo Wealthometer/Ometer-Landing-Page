@@ -576,43 +576,107 @@ Frame {
 <span class="cm">// Scope chain:</span>
 globalScope → functionScope → blockScope</code></pre>
 
-<hr>
+      <hr>
 
-<h2 id="keywords">Keywords</h2>
-<table>
-  <tr><th>Keyword</th><th>Purpose</th></tr>
-  <tr><td>let</td><td>Declare a variable</td></tr>
-  <tr><td>fn</td><td>Declare a named or anonymous function</td></tr>
-  <tr><td>return</td><td>Return a value from a function</td></tr>
-  <tr><td>if / else</td><td>Conditional branches</td></tr>
-  <tr><td>while</td><td>Loop while condition is truthy</td></tr>
-  <tr><td>for / in</td><td>Iterate over arrays or objects</td></tr>
-  <tr><td>break / continue</td><td>Loop control</td></tr>
-  <tr><td>import</td><td>Load a built-in module</td></tr>
-  <tr><td>print</td><td>Write value to stdout</td></tr>
-  <tr><td>true / false</td><td>Boolean literals</td></tr>
-  <tr><td>null</td><td>Null value</td></tr>
-</table>
+      <h2 id="keywords">Keywords</h2>
+      <table>
+        <tr>
+          <th>Keyword</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td>let</td>
+          <td>Declare a variable</td>
+        </tr>
+        <tr>
+          <td>fn</td>
+          <td>Declare a named or anonymous function</td>
+        </tr>
+        <tr>
+          <td>return</td>
+          <td>Return a value from a function</td>
+        </tr>
+        <tr>
+          <td>if / else</td>
+          <td>Conditional branches</td>
+        </tr>
+        <tr>
+          <td>while</td>
+          <td>Loop while condition is truthy</td>
+        </tr>
+        <tr>
+          <td>for / in</td>
+          <td>Iterate over arrays or objects</td>
+        </tr>
+        <tr>
+          <td>break / continue</td>
+          <td>Loop control</td>
+        </tr>
+        <tr>
+          <td>import</td>
+          <td>Load a built-in module</td>
+        </tr>
+        <tr>
+          <td>print</td>
+          <td>Write value to stdout</td>
+        </tr>
+        <tr>
+          <td>true / false</td>
+          <td>Boolean literals</td>
+        </tr>
+        <tr>
+          <td>null</td>
+          <td>Null value</td>
+        </tr>
+      </table>
 
-<h2 id="errors">Error Messages</h2>
-<div class="callout warn">
-  <span class="callout-label">⚠ Tip</span>
-  <p>All errors include a line number. Run <code>ometer lex</code> or <code>ometer parse</code> to isolate which stage failed.</p>
-</div>
-<table>
-  <tr><th>Error</th><th>Cause</th></tr>
-  <tr><td>LexerError: Unexpected character</td><td>Invalid character in source</td></tr>
-  <tr><td>LexerError: Unterminated string</td><td>Missing closing quote</td></tr>
-  <tr><td>ParseError: Expected '('</td><td>Missing paren after if/while/fn</td></tr>
-  <tr><td>ParseError: Invalid assignment target</td><td>Left side of = is not assignable</td></tr>
-  <tr><td>CompileError: 'break' outside loop</td><td>break/continue not inside a loop</td></tr>
-  <tr><td>RuntimeError: Undefined variable</td><td>Variable used before declaration</td></tr>
-  <tr><td>RuntimeError: Division by zero</td><td>Dividing by 0 at runtime</td></tr>
-  <tr><td>RuntimeError: Cannot call non-function</td><td>Calling a non-callable value</td></tr>
-</table>
+      <h2 id="errors">Error Messages</h2>
+      <div class="callout warn">
+        <span class="callout-label">⚠ Tip</span>
+        <p>All errors include a line number. Run <code>ometer lex</code> or <code>ometer parse</code> to isolate which
+          stage failed.</p>
+      </div>
+      <table>
+        <tr>
+          <th>Error</th>
+          <th>Cause</th>
+        </tr>
+        <tr>
+          <td>LexerError: Unexpected character</td>
+          <td>Invalid character in source</td>
+        </tr>
+        <tr>
+          <td>LexerError: Unterminated string</td>
+          <td>Missing closing quote</td>
+        </tr>
+        <tr>
+          <td>ParseError: Expected '('</td>
+          <td>Missing paren after if/while/fn</td>
+        </tr>
+        <tr>
+          <td>ParseError: Invalid assignment target</td>
+          <td>Left side of = is not assignable</td>
+        </tr>
+        <tr>
+          <td>CompileError: 'break' outside loop</td>
+          <td>break/continue not inside a loop</td>
+        </tr>
+        <tr>
+          <td>RuntimeError: Undefined variable</td>
+          <td>Variable used before declaration</td>
+        </tr>
+        <tr>
+          <td>RuntimeError: Division by zero</td>
+          <td>Dividing by 0 at runtime</td>
+        </tr>
+        <tr>
+          <td>RuntimeError: Cannot call non-function</td>
+          <td>Calling a non-callable value</td>
+        </tr>
+      </table>
 
-<h2 id="grammar">Grammar (BNF)</h2>
-<pre><code>program       → statement* EOF
+      <h2 id="grammar">Grammar (BNF)</h2>
+      <pre><code>program       → statement* EOF
 statement     → letDecl | fnDecl | returnStmt | ifStmt
               | whileStmt | forInStmt | importStmt
               | printStmt | breakStmt | continueStmt | exprStmt
