@@ -351,3 +351,18 @@ x ** y  <span class="cm">// power (right-associative)</span>
 x &lt; y    x &gt; y    x &lt;= y    x &gt;= y    <span class="cm">// comparison</span></code></pre>
 <h3>Logical</h3>
 <pre><code>x &amp;&amp; y   <span class="cm">// AND — short-circuits, returns actual value</span>
+x || y   <span class="cm">// OR  — short-circuits, returns actual value</span>
+!x       <span class="cm">// NOT</span></code></pre>
+
+<!-- CONTROL FLOW -->
+<h2 id="control">Control Flow</h2>
+<h3>if / else if / else</h3>
+<pre><code><span class="kw">if</span> (score >= <span class="num">90</span>) {
+  <span class="fn">print</span>(<span class="str">"A"</span>)
+} <span class="kw">else if</span> (score >= <span class="num">70</span>) {
+  <span class="fn">print</span>(<span class="str">"B"</span>)
+} <span class="kw">else</span> {
+  <span class="fn">print</span>(<span class="str">"C"</span>)
+}</code></pre>
+<h3>while</h3>
+<pre><code><span class="kw">let</span> i = <span class="num">0</span>
