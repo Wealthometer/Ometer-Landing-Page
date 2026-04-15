@@ -396,3 +396,24 @@ hr {
 }
 .op-card {
   background: var(--ink2);
+  border: 1px solid var(--border);
+  padding: 14px 16px;
+}
+.op-name {
+  font-family: "DM Mono", monospace;
+  font-size: 0.78rem;
+  color: var(--lime);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.op-args {
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  color: var(--slate);
+  margin-top: 3px;
+}
+.op-desc {
+  font-size: 0.78rem;
+  color: var(--slate);
+  line-height: 1.5;
+}
