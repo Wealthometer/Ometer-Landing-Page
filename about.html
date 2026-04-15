@@ -253,14 +253,20 @@ STRING     "Ometer"  L1:13</pre>
         </div>
       </div>
 
-  <!-- CHAPTER 5 -->
-  <div class="chapter">
-    <div class="ch-num">05</div>
-    <div class="ch-content">
-      <h3>The Web Framework</h3>
-      <p>The web stdlib is implemented as a set of <strong>OmNativeFunction</strong> values — TypeScript functions wrapped in Ometer's runtime type system. When Ometer calls <code>app.get()</code>, the VM calls the native TypeScript function, which registers the route. When a request comes in from Node's http module, the VM is called back to execute the Ometer handler.</p>
-      <p>Route matching supports <strong>URL parameters</strong> with <code>:param</code> syntax. The matcher splits both the registered path and the request path on <code>/</code>, aligns them, and extracts named segments into <code>req.params</code>. Query strings are parsed into <code>req.query</code>. Request bodies are parsed as JSON and converted into Ometer objects via the <code>jsToOm</code> bridge.</p>
-      <pre>app.<span class="fn">get</span>(<span class="str">"/users/:id"</span>, <span class="kw">fn</span>(req, res) {
+      <!-- CHAPTER 5 -->
+      <div class="chapter">
+        <div class="ch-num">05</div>
+        <div class="ch-content">
+          <h3>The Web Framework</h3>
+          <p>The web stdlib is implemented as a set of <strong>OmNativeFunction</strong> values — TypeScript functions
+            wrapped in Ometer's runtime type system. When Ometer calls <code>app.get()</code>, the VM calls the native
+            TypeScript function, which registers the route. When a request comes in from Node's http module, the VM is
+            called back to execute the Ometer handler.</p>
+          <p>Route matching supports <strong>URL parameters</strong> with <code>:param</code> syntax. The matcher splits
+            both the registered path and the request path on <code>/</code>, aligns them, and extracts named segments
+            into <code>req.params</code>. Query strings are parsed into <code>req.query</code>. Request bodies are
+            parsed as JSON and converted into Ometer objects via the <code>jsToOm</code> bridge.</p>
+          <pre>app.<span class="fn">get</span>(<span class="str">"/users/:id"</span>, <span class="kw">fn</span>(req, res) {
   <span class="kw">let</span> id = req.<span class="num">params</span>.<span class="num">id</span>   <span class="cm">// "42" from /users/42</span>
   res.<span class="fn">json</span>({ id: id })
 })</pre>
