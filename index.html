@@ -520,3 +520,10 @@ footer p { font-family: 'DM Mono', monospace; font-size: .68rem; color: var(--sl
 /* ─── ANIMATIONS ───────────────────────────────────── */
 @keyframes up {
   from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+/* ─── RESPONSIVE ───────────────────────────────────── */
+@media(max-width:960px){
+  nav { padding: 0 24px; }
