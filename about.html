@@ -299,3 +299,17 @@ footer p{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--slate)}
       </div>
     </div>
   </div>
+</div>
+
+<!-- DESIGN DECISIONS -->
+<div class="section-full">
+  <div class="section-full-inner">
+    <div class="eyebrow">// Design Decisions</div>
+    <div class="big-title">Why each choice<br>was made.</div>
+    <div class="decision-grid">
+      <div class="d-card">
+        <div class="d-q">Why TypeScript?</div>
+        <div class="d-a"><b>Safety at the meta level.</b> Building a dynamic language is full of edge cases. TypeScript's type system catches bugs in the interpreter itself — not just in Ometer programs.</div>
+      </div>
+      <div class="d-card">
+        <div class="d-q">Why a custom VM instead of transpiling to JS?</div>
