@@ -72,3 +72,61 @@ body {
   display: flex;
   gap: 20px;
 }
+.topbar-links a {
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  color: var(--slate);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.topbar-links a:hover {
+  color: var(--lime);
+}
+.topbar-links a.active {
+  color: var(--lime);
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  padding-top: 56px;
+  flex: 1;
+}
+
+/* SIDEBAR */
+.sb {
+  width: var(--sb);
+  flex-shrink: 0;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  background: var(--ink2);
+  border-right: 1px solid var(--border);
+  padding: 20px 0 40px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.sb::-webkit-scrollbar {
+  width: 3px;
+}
+.sb::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+.sb-group {
+  padding: 0 16px;
+  margin-bottom: 4px;
+}
+.sb-heading {
+  font-family: "DM Mono", monospace;
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lime);
+  padding: 16px 8px 6px;
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+}
+.sb-group:first-child .sb-heading {
+  border-top: none;
