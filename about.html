@@ -200,14 +200,19 @@ STRING     "Ometer"  L1:13</pre>
         </div>
       </div>
 
-  <!-- CHAPTER 3 -->
-  <div class="chapter">
-    <div class="ch-num">03</div>
-    <div class="ch-content">
-      <h3>The Compiler</h3>
-      <p>The compiler in <strong>compiler.ts</strong> walks the AST depth-first and emits <strong>bytecode instructions</strong>. Each function body (including the top-level program) becomes a <code>Chunk</code> — a named unit containing an instruction list and a list of child Chunks for nested functions.</p>
-      <p>The most interesting part is <strong>jump back-patching</strong>. When compiling a while loop, the compiler emits a <code>JUMP_IF_FALSE</code> with a placeholder target, compiles the loop body, emits a backward <code>JUMP</code>, then patches the exit jump to point to the instruction after the loop. The same technique handles break and continue.</p>
-      <pre><span class="cm">// while (i < 3) { print(i) } compiles to:</span>
+      <!-- CHAPTER 3 -->
+      <div class="chapter">
+        <div class="ch-num">03</div>
+        <div class="ch-content">
+          <h3>The Compiler</h3>
+          <p>The compiler in <strong>compiler.ts</strong> walks the AST depth-first and emits <strong>bytecode
+              instructions</strong>. Each function body (including the top-level program) becomes a <code>Chunk</code> —
+            a named unit containing an instruction list and a list of child Chunks for nested functions.</p>
+          <p>The most interesting part is <strong>jump back-patching</strong>. When compiling a while loop, the compiler
+            emits a <code>JUMP_IF_FALSE</code> with a placeholder target, compiles the loop body, emits a backward
+            <code>JUMP</code>, then patches the exit jump to point to the instruction after the loop. The same technique
+            handles break and continue.</p>
+          <pre><span class="cm">// while (i < 3) { print(i) } compiles to:</span>
 0000  LOAD        <span class="str">"i"</span>
 0001  PUSH        <span class="num">3</span>
 0002  LT
