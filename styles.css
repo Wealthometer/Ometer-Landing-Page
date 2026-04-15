@@ -422,3 +422,27 @@
     }
 
     .ticker-inner {
+      display: flex;
+      animation: ticker 22s linear infinite;
+      width: max-content;
+      gap: 0;
+    }
+
+    .ticker-item {
+      font-family: 'DM Mono', monospace;
+      font-size: .7rem;
+      color: var(--lime-d);
+      padding: 0 48px;
+      white-space: nowrap;
+    }
+
+    .ticker-item .h {
+      color: var(--lime);
+    }
+
+    @keyframes ticker {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
