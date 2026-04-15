@@ -610,3 +610,11 @@ globalScope → functionScope → blockScope</code></pre>
 </table>
 
 <h2 id="grammar">Grammar (BNF)</h2>
+<pre><code>program       → statement* EOF
+statement     → letDecl | fnDecl | returnStmt | ifStmt
+              | whileStmt | forInStmt | importStmt
+              | printStmt | breakStmt | continueStmt | exprStmt
+letDecl       → "let" IDENT ("=" expression)?
+fnDecl        → "fn" IDENT "(" params ")" block
+returnStmt    → "return" expression?
+ifStmt        → "if" "(" expr ")" block ("else" (ifStmt | block))?
