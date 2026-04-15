@@ -254,3 +254,43 @@
 
     .hero-actions {
       display: flex;
+      gap: 12px;
+      margin-top: 40px;
+      opacity: 0;
+      animation: up .6s .48s forwards;
+    }
+
+    .btn-hero-p {
+      font-family: 'DM Mono', monospace;
+      font-size: .85rem;
+      font-weight: 500;
+      background: var(--lime);
+      color: var(--ink);
+      padding: 14px 32px;
+      border-radius: 2px;
+      text-decoration: none;
+      letter-spacing: .04em;
+      transition: all .2s;
+    }
+
+    .btn-hero-p:hover {
+      background: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-hero-s {
+      font-family: 'DM Mono', monospace;
+      font-size: .85rem;
+      color: var(--slate);
+      padding: 14px 32px;
+      border-radius: 2px;
+      text-decoration: none;
+      letter-spacing: .04em;
+      border: 1px solid var(--border);
+      transition: all .2s;
+    }
+
+    .btn-hero-s:hover {
+      border-color: var(--slate);
+      color: var(--white);
+    }
