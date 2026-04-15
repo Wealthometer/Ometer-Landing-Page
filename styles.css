@@ -378,3 +378,47 @@
     }
 
     .kw {
+      color: #C792EA;
+    }
+
+    .fn {
+      color: #82AAFF;
+    }
+
+    .str {
+      color: #C3E88D;
+    }
+
+    .num {
+      color: #F78C6C;
+    }
+
+    .cm {
+      color: #4A5568;
+      font-style: italic;
+    }
+
+    .op {
+      color: var(--lime);
+    }
+
+    .pr {
+      color: #89DDFF;
+    }
+
+    /* Typing cursor blink */
+    .cursor-blink::after {
+      content: '▋';
+      color: var(--lime);
+      animation: blink 1s step-end infinite;
+    }
+   
+    .ticker {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+      padding: 14px 0;
+      background: var(--ink2);
+    }
+
+    .ticker-inner {
