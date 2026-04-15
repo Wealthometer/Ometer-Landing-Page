@@ -331,3 +331,23 @@ count /= <span class="num">2</span>   <span class="cm">// 0</span></code></pre>
   <tr><td>String</td><td>"hi" / 'hi'</td><td>Single or double quotes. Escape sequences: \n \t \\ \" \'</td></tr>
   <tr><td>Bool</td><td>true / false</td><td>Boolean literals</td></tr>
   <tr><td>Null</td><td>null</td><td>Intentional absence of value</td></tr>
+  <tr><td>Array</td><td>[1, "x", true]</td><td>Ordered, any element types</td></tr>
+  <tr><td>Object</td><td>{ key: val }</td><td>String keys, any value types</td></tr>
+  <tr><td>Function</td><td>fn(x) { ... }</td><td>First-class values</td></tr>
+</table>
+
+<!-- OPERATORS -->
+<h2 id="operators">Operators</h2>
+<h3>Arithmetic</h3>
+<pre><code>x + y   <span class="cm">// add / string concatenation</span>
+x - y   <span class="cm">// subtract</span>
+x * y   <span class="cm">// multiply</span>
+x / y   <span class="cm">// divide</span>
+x % y   <span class="cm">// modulo</span>
+x ** y  <span class="cm">// power (right-associative)</span>
+-x      <span class="cm">// unary negation</span></code></pre>
+<h3>Comparison</h3>
+<pre><code>x == y   x != y          <span class="cm">// equality</span>
+x &lt; y    x &gt; y    x &lt;= y    x &gt;= y    <span class="cm">// comparison</span></code></pre>
+<h3>Logical</h3>
+<pre><code>x &amp;&amp; y   <span class="cm">// AND — short-circuits, returns actual value</span>
