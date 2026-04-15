@@ -45,3 +45,15 @@ body{background:var(--ink);color:var(--white);font-family:'DM Sans',sans-serif;f
   overflow-y:auto;
   background:var(--ink2);
   border-right:1px solid var(--border);
+  padding:20px 0 40px;
+  scrollbar-width:thin;
+  scrollbar-color:var(--border) transparent;
+}
+.sb::-webkit-scrollbar{width:3px}
+.sb::-webkit-scrollbar-thumb{background:var(--border)}
+.sb-group{padding:0 16px;margin-bottom:4px}
+.sb-heading{
+  font-family:'DM Mono',monospace;font-size:.58rem;
+  text-transform:uppercase;letter-spacing:.12em;
+  color:var(--lime);
+  padding:16px 8px 6px;
