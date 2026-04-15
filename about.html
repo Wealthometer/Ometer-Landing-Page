@@ -323,40 +323,48 @@ STRING     "Ometer"  L1:13</pre>
       </div>
     </div>
 
-<!-- PRINCIPLES -->
-<div class="section">
-  <div class="eyebrow">// Design Principles</div>
-  <div class="big-title">Built with intent.</div>
-  <div class="principles">
-    <div class="p-card">
-      <div class="p-n">01</div>
-      <div class="p-title">Transparency</div>
-      <p class="p-text">Every stage of the pipeline is inspectable. <code>ometer lex</code>, <code>ometer parse</code>, <code>ometer compile</code> expose tokens, AST, and bytecode. No black boxes.</p>
-    </div>
-    <div class="p-card">
-      <div class="p-n">02</div>
-      <div class="p-title">Correctness First</div>
-      <p class="p-text">Each layer was fully tested before the next was started. Lexer verified before parser. Parser verified before compiler. Compiler verified before VM.</p>
-    </div>
-    <div class="p-card">
-      <div class="p-n">03</div>
-      <div class="p-title">Zero Dependencies</div>
-      <p class="p-text">Ometer programs have zero npm dependencies. The language, VM, and web server run purely on Node's built-in <code>http</code> module and TypeScript.</p>
-    </div>
-    <div class="p-card">
-      <div class="p-n">04</div>
-      <div class="p-title">Minimal Surface</div>
-      <p class="p-text">The language has exactly what it needs and nothing extra. No module system complexity, no generics, no overloading. Clean, learnable, writable.</p>
-    </div>
-    <div class="p-card">
-      <div class="p-n">05</div>
-      <div class="p-title">Web First</div>
-      <p class="p-text">The web framework isn't a bolt-on. HTTP, routing, and JSON responses are built into the VM itself — they're as native as arithmetic.</p>
-    </div>
-    <div class="p-card">
-      <div class="p-n">06</div>
-      <div class="p-title">Hackable</div>
-      <p class="p-text">Every layer is a readable TypeScript file under 520 lines. Adding a new opcode, a new AST node, or a new stdlib module takes minutes.</p>
+    <!-- PRINCIPLES -->
+    <div class="section">
+      <div class="eyebrow">// Design Principles</div>
+      <div class="big-title">Built with intent.</div>
+      <div class="principles">
+        <div class="p-card">
+          <div class="p-n">01</div>
+          <div class="p-title">Transparency</div>
+          <p class="p-text">Every stage of the pipeline is inspectable. <code>ometer lex</code>,
+            <code>ometer parse</code>, <code>ometer compile</code> expose tokens, AST, and bytecode. No black boxes.</p>
+        </div>
+        <div class="p-card">
+          <div class="p-n">02</div>
+          <div class="p-title">Correctness First</div>
+          <p class="p-text">Each layer was fully tested before the next was started. Lexer verified before parser.
+            Parser verified before compiler. Compiler verified before VM.</p>
+        </div>
+        <div class="p-card">
+          <div class="p-n">03</div>
+          <div class="p-title">Zero Dependencies</div>
+          <p class="p-text">Ometer programs have zero npm dependencies. The language, VM, and web server run purely on
+            Node's built-in <code>http</code> module and TypeScript.</p>
+        </div>
+        <div class="p-card">
+          <div class="p-n">04</div>
+          <div class="p-title">Minimal Surface</div>
+          <p class="p-text">The language has exactly what it needs and nothing extra. No module system complexity, no
+            generics, no overloading. Clean, learnable, writable.</p>
+        </div>
+        <div class="p-card">
+          <div class="p-n">05</div>
+          <div class="p-title">Web First</div>
+          <p class="p-text">The web framework isn't a bolt-on. HTTP, routing, and JSON responses are built into the VM
+            itself — they're as native as arithmetic.</p>
+        </div>
+        <div class="p-card">
+          <div class="p-n">06</div>
+          <div class="p-title">Hackable</div>
+          <p class="p-text">Every layer is a readable TypeScript file under 520 lines. Adding a new opcode, a new AST
+            node, or a new stdlib module takes minutes.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
