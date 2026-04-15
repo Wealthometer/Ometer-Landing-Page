@@ -214,3 +214,60 @@ nav.stuck {
 }
 .stack-row:last-child {
   border-bottom: none;
+}
+.stack-row:hover {
+  background: var(--ink3);
+}
+.stack-idx {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2rem;
+  color: var(--lime-d);
+  width: 24px;
+  flex-shrink: 0;
+}
+.stack-name {
+  font-family: "DM Mono", monospace;
+  font-size: 0.82rem;
+  color: var(--white);
+  flex: 1;
+}
+.stack-file {
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  color: var(--slate);
+}
+.stack-status {
+  font-family: "DM Mono", monospace;
+  font-size: 0.62rem;
+  background: rgba(212, 255, 0, 0.1);
+  color: var(--lime);
+  padding: 3px 10px;
+  border-radius: 2px;
+  border: 1px solid var(--lime-d);
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-full {
+  padding: 80px 48px;
+  border-top: 1px solid var(--border);
+}
+.section-full-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  color: var(--lime);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.big-title {
+  font-family: "Bebas Neue", sans-serif;
