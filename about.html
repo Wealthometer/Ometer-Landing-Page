@@ -313,3 +313,22 @@ footer p{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--slate)}
       </div>
       <div class="d-card">
         <div class="d-q">Why a custom VM instead of transpiling to JS?</div>
+        <div class="d-a"><b>Full control.</b> Transpiling to JS means inheriting JavaScript's semantics, scoping rules, and edge cases. A custom VM means Ometer's behaviour is 100% defined by Ometer.</div>
+      </div>
+      <div class="d-card">
+        <div class="d-q">Why dynamic typing?</div>
+        <div class="d-a"><b>Speed of iteration.</b> For a web framework language, the friction of type declarations hurts more than it helps. Dynamic typing keeps .om files clean and expressive.</div>
+      </div>
+      <div class="d-card">
+        <div class="d-q">Why a stack-based VM over a register-based one?</div>
+        <div class="d-a"><b>Simplicity.</b> Stack VMs are easier to implement correctly and debug. The bytecode is compact and the execution model is straightforward — no register allocation needed.</div>
+      </div>
+      <div class="d-card">
+        <div class="d-q">Why a recursive descent parser?</div>
+        <div class="d-a"><b>Readability and control.</b> A hand-written recursive descent parser maps 1:1 to the grammar. It's easy to extend, gives great error messages, and requires no parser-generator tooling.</div>
+      </div>
+      <div class="d-card">
+        <div class="d-q">Why built-in web framework vs a library?</div>
+        <div class="d-a"><b>Zero-friction onboarding.</b> The whole point of Ometer is that you write <code>import web</code> and have a server. A separate library would undercut that promise entirely.</div>
+      </div>
+    </div>
