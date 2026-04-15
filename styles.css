@@ -180,3 +180,37 @@
       }
 
       50% {
+        opacity: .7
+      }
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: .68rem;
+      color: var(--lime);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border: 1px solid var(--lime-d);
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: up .5s .1s forwards;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--lime);
+      border-radius: 50%;
+      animation: blink 1.4s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
