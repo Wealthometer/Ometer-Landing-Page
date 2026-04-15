@@ -124,3 +124,17 @@ nav.stuck {
 }
 
 /* Animated grid bg */
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(ellipse 80% 70% at 60% 40%, black 30%, transparent 100%);
+  opacity: .5;
+  animation: gridPulse 8s ease-in-out infinite;
+}
+@keyframes gridPulse {
+  0%,100%{opacity:.4} 50%{opacity:.7}
+}
+
