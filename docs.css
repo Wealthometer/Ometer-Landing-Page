@@ -272,3 +272,14 @@ pre code {
   font-size: 0.8rem;
   line-height: 1.9;
   color: var(--white);
+  display: block;
+}
+.pre-lang {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-family: "DM Mono", monospace;
+  font-size: 0.58rem;
+  color: var(--slate);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
