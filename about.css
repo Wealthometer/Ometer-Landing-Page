@@ -55,3 +55,32 @@ nav {
   right: 0;
   z-index: 300;
   height: 58px;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  border-bottom: 1px solid transparent;
+  transition:
+    background 0.3s,
+    border-color 0.3s;
+}
+nav.stuck {
+  background: rgba(8, 9, 12, 0.93);
+  backdrop-filter: blur(16px);
+  border-color: var(--border);
+}
+.nav-logo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.06em;
+  color: var(--lime);
+  text-decoration: none;
+}
+.nav-logo b {
+  color: var(--white);
+  font-weight: 400;
+}
+.nav-c {
+  display: flex;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
