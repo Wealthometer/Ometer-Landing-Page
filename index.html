@@ -182,26 +182,44 @@ app.<span class="fn">listen</span>(<span class="num">3000</span>)<span class="cu
       </div>
     </div>
 
-<!-- CODE DEMO -->
-<div class="z1">
-  <div class="section">
-    <div class="demo-split">
-      <div class="demo-text">
-        <div class="eyebrow">// Web Server</div>
-        <h2>A server in<br><span>ten lines.</span></h2>
-        <p>Ometer's built-in web module means zero config, zero dependencies. Import web, define routes, listen. Ship.</p>
-        <ul class="check-list">
-          <li>GET, POST, PUT, DELETE routing with URL params</li>
-          <li>Middleware chain with next() support</li>
-          <li>res.json(), res.send(), res.status(), res.html()</li>
-          <li>req.body, req.params, req.query, req.headers</li>
-          <li>Runs on Node's http module under the hood</li>
-        </ul>
-      </div>
-      <div class="win">
-        <div class="win-bar">
-          <div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div>
-          <span class="win-fname">api.om</span>
+    <!-- PIPELINE -->
+    <div style="background:var(--ink2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+      <div class="section">
+        <div class="eyebrow">// How It Works</div>
+        <div class="section-title">Source to execution<br>in four stages.</div>
+        <div class="pipe-grid">
+          <div class="pipe-step">
+            <div class="pipe-n">01</div>
+            <div class="pipe-name">Lexer</div>
+            <p class="pipe-desc">Raw .om source is scanned character-by-character into a typed token stream with precise
+              line and column metadata.</p>
+            <span class="pipe-tag">lexer.ts</span>
+            <div class="pipe-arrow">›</div>
+          </div>
+          <div class="pipe-step">
+            <div class="pipe-n">02</div>
+            <div class="pipe-name">Parser</div>
+            <p class="pipe-desc">A recursive descent parser consumes tokens and produces a fully typed AST — 24 node
+              kinds covering every construct.</p>
+            <span class="pipe-tag">parser.ts + ast.ts</span>
+            <div class="pipe-arrow">›</div>
+          </div>
+          <div class="pipe-step">
+            <div class="pipe-n">03</div>
+            <div class="pipe-name">Compiler</div>
+            <p class="pipe-desc">The AST is walked depth-first and flattened into bytecode Chunk objects — one per
+              function scope. Jump back-patching for loops.</p>
+            <span class="pipe-tag">compiler.ts</span>
+            <div class="pipe-arrow">›</div>
+          </div>
+          <div class="pipe-step">
+            <div class="pipe-n">04</div>
+            <div class="pipe-name">VM</div>
+            <p class="pipe-desc">A stack-based virtual machine executes bytecode with call frames, lexical scopes,
+              native stdlib, and the web framework.</p>
+            <span class="pipe-tag">vm.ts</span>
+            <div class="pipe-arrow">›</div>
+          </div>
         </div>
         <div class="win-body">
 <pre><span class="kw">import</span> web
