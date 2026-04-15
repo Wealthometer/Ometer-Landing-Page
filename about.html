@@ -221,9 +221,11 @@ STRING     "Ometer"  L1:13</pre>
 0005  PRINT
 0006  JUMP        <span class="lime">0000</span>   <span class="cm">← back edge</span>
 0007  ...</pre>
-      <p>Short-circuit <code>&amp;&amp;</code> and <code>||</code> use a <strong>DUP + conditional jump</strong> pattern: duplicate the left value, test it, jump if short-circuiting (leaving the original on the stack), otherwise pop and evaluate the right side.</p>
-    </div>
-  </div>
+          <p>Short-circuit <code>&amp;&amp;</code> and <code>||</code> use a <strong>DUP + conditional jump</strong>
+            pattern: duplicate the left value, test it, jump if short-circuiting (leaving the original on the stack),
+            otherwise pop and evaluate the right side.</p>
+        </div>
+      </div>
 
   <!-- CHAPTER 4 -->
   <div class="chapter">
