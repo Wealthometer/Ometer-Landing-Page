@@ -446,3 +446,28 @@
       }
 
       to {
+        transform: translateX(-50%)
+      }
+    }
+   
+    .section {
+      padding: 100px 48px;
+      max-width: var(--w);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: .65rem;
+      color: var(--lime);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      letter-spacing: .02em;
+      line-height: .95;
+      margin-bottom: 20px;
