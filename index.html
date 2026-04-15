@@ -773,3 +773,33 @@ app.<span class="fn">get</span>(<span class="str">"/users/:id"</span>, <span cla
 })
 
 app.<span class="fn">post</span>(<span class="str">"/users"</span>, <span class="kw">fn</span>(req, res) {
+  <span class="kw">let</span> user = req.<span class="pr">body</span>
+  arr.<span class="fn">push</span>(users, user)
+  res.<span class="fn">status</span>(<span class="num">201</span>).<span class="fn">json</span>({
+    created: <span class="num">true</span>
+  })
+})
+
+app.<span class="fn">listen</span>(<span class="num">8080</span>)</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUICKSTART -->
+<div style="border-top:1px solid var(--border);" id="quickstart">
+  <div class="section">
+    <div class="eyebrow">// Get Started</div>
+    <div class="section-title">Up and running<br>in minutes.</div>
+    <div class="qs-grid">
+      <div class="qs-steps">
+        <div class="qs-step">
+          <div class="qs-n">1</div>
+          <div>
+            <h4>Clone the repository</h4>
+            <p>Grab Ometer from GitHub and enter the directory.</p>
+            <span class="cmd"><span class="p">$</span>git clone https://github.com/you/ometer<br><span class="p">$</span>cd ometer</span>
+          </div>
+        </div>
+        <div class="qs-step">
