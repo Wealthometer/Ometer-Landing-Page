@@ -495,3 +495,31 @@
     .feat {
       padding: 40px 32px;
       border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      transition: background .25s;
+      overflow: hidden;
+    }
+
+    .feat:hover {
+      background: var(--ink2);
+    }
+
+    .feat::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--lime);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s;
+    }
+
+    .feat:hover::after {
+      transform: scaleX(1);
+    }
+
+    .feat-n {
