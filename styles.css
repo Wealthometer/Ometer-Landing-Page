@@ -850,3 +850,25 @@
       }
 
       .pipe-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .demo-split {
+        grid-template-columns: 1fr;
+      }
+
+      .qs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-band {
+        padding: 80px 24px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 24px;
+        text-align: center;
+      }
+    }
