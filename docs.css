@@ -235,3 +235,14 @@ p {
   margin-bottom: 14px;
   font-size: 0.93rem;
 }
+p strong {
+  color: var(--white);
+  font-weight: 600;
+}
+a {
+  color: var(--lime);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
