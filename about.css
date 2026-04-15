@@ -311,3 +311,44 @@ nav.stuck {
   letter-spacing: 0.03em;
   margin-bottom: 16px;
   color: var(--lime);
+}
+.ch-content p {
+  color: var(--slate);
+  font-size: 0.93rem;
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+.ch-content p strong {
+  color: var(--white);
+  font-weight: 600;
+}
+.ch-content pre {
+  background: var(--ink2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px;
+  font-family: "DM Mono", monospace;
+  font-size: 0.78rem;
+  line-height: 1.8;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+.ch-content pre .cm {
+  color: #3a4a5a;
+  font-style: italic;
+}
+.ch-content pre .kw {
+  color: #c792ea;
+}
+.ch-content pre .fn {
+  color: #82aaff;
+}
+.ch-content pre .str {
+  color: #c3e88d;
+}
+.ch-content pre .num {
+  color: #f78c6c;
+}
+.ch-content pre .lime {
+  color: var(--lime);
+}
