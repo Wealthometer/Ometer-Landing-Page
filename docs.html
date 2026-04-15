@@ -618,3 +618,13 @@ letDecl       → "let" IDENT ("=" expression)?
 fnDecl        → "fn" IDENT "(" params ")" block
 returnStmt    → "return" expression?
 ifStmt        → "if" "(" expr ")" block ("else" (ifStmt | block))?
+whileStmt     → "while" "(" expr ")" block
+forInStmt     → "for" "(" IDENT "in" expr ")" block
+expression    → assignment
+assignment    → logicalOr (("=" | "+=" | "-=" | "*=" | "/=") assignment)?
+logicalOr     → logicalAnd ("||" logicalAnd)*
+logicalAnd    → equality ("&&" equality)*
+equality      → comparison (("==" | "!=") comparison)*
+comparison    → addition (("<" | ">" | "<=" | ">=") addition)*
+addition      → multiplication (("+" | "-") multiplication)*
+multiplication→ power (("*" | "/" | "%") power)*
