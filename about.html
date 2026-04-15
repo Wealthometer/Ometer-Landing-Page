@@ -373,3 +373,14 @@ STRING     "Ometer"  L1:13</pre>
     kind: <span class="str">"BlockStmt"</span>, body: [{
       kind: <span class="str">"ReturnStmt"</span>,
       value: {
+        kind: <span class="str">"BinaryExpr"</span>,
+        left:  { kind: <span class="str">"Identifier"</span>, name: <span class="str">"a"</span> },
+        <span class="lime">operator: "+"</span>,
+        right: { kind: <span class="str">"Identifier"</span>, name: <span class="str">"b"</span> }
+      }
+    }]
+  }
+}</pre>
+      <p>Expression precedence is handled through the recursive descent hierarchy: assignment → logical-or → logical-and → equality → comparison → addition → multiplication → power → unary → postfix → primary. Eleven levels, cleanly separated, each a distinct method.</p>
+    </div>
+  </div>
