@@ -518,3 +518,7 @@ app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span 
 
 <h2 id="response">Response Object</h2>
 <table>
+  <tr><th>Method</th><th>Description</th></tr>
+  <tr><td>res.send(text)</td><td>Send plain text (Content-Type: text/plain)</td></tr>
+  <tr><td>res.json(obj)</td><td>Send JSON response (Content-Type: application/json)</td></tr>
+  <tr><td>res.html(str)</td><td>Send HTML response (Content-Type: text/html)</td></tr>
