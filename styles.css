@@ -548,3 +548,31 @@
       color: var(--slate);
       font-size: .88rem;
       line-height: 1.75;
+    }
+   
+    .pipe-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--border);
+      margin-top: 50px;
+    }
+
+    .pipe-step {
+      padding: 36px 28px;
+      border-right: 1px solid var(--border);
+      position: relative;
+    }
+
+    .pipe-step:last-child {
+      border-right: none;
+    }
+
+    .pipe-arrow {
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--lime);
+      font-size: 1.2rem;
+      font-family: 'DM Mono', monospace;
+      z-index: 2;
