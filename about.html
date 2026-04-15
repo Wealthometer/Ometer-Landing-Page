@@ -74,3 +74,12 @@ nav.stuck{background:rgba(8,9,12,.93);backdrop-filter:blur(16px);border-color:va
 .stack-box{
   background:var(--ink2);border:1px solid var(--border);
   border-radius:8px;overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,.6);
+}
+.stack-row{
+  display:flex;align-items:center;gap:16px;
+  padding:16px 20px;border-bottom:1px solid var(--border);
+  transition:background .2s;
+}
+.stack-row:last-child{border-bottom:none}
+.stack-row:hover{background:var(--ink3)}
