@@ -268,3 +268,15 @@ pre { font-family: 'DM Mono', monospace; font-size: .8rem; line-height: 1.85; ta
   animation: blink 1s step-end infinite;
 }
 
+/* ─── TICKER ───────────────────────────────────────── */
+.ticker {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 14px 0;
+  background: var(--ink2);
+}
+.ticker-inner {
+  display: flex;
+  animation: ticker 22s linear infinite;
+  width: max-content;
