@@ -405,3 +405,47 @@ nav.stuck {
 .tl-item::before {
   content: "";
   position: absolute;
+  left: -37px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--lime);
+  border: 2px solid var(--ink);
+}
+.tl-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  color: var(--lime);
+  margin-bottom: 4px;
+  letter-spacing: 0.05em;
+}
+.tl-text {
+  color: var(--slate);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* FILE TABLE */
+.file-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 20px 0;
+}
+.file-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--ink2);
+  border: 1px solid var(--border);
+  padding: 14px 18px;
+}
+.file-name {
+  font-family: "DM Mono", monospace;
+  font-size: 0.82rem;
+  color: var(--lime);
+  flex: 0 0 180px;
+}
+.file-size {
+  font-family: "DM Mono", monospace;
