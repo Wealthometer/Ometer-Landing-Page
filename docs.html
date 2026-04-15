@@ -603,3 +603,10 @@ globalScope → functionScope → blockScope</code></pre>
   <tr><td>LexerError: Unterminated string</td><td>Missing closing quote</td></tr>
   <tr><td>ParseError: Expected '('</td><td>Missing paren after if/while/fn</td></tr>
   <tr><td>ParseError: Invalid assignment target</td><td>Left side of = is not assignable</td></tr>
+  <tr><td>CompileError: 'break' outside loop</td><td>break/continue not inside a loop</td></tr>
+  <tr><td>RuntimeError: Undefined variable</td><td>Variable used before declaration</td></tr>
+  <tr><td>RuntimeError: Division by zero</td><td>Dividing by 0 at runtime</td></tr>
+  <tr><td>RuntimeError: Cannot call non-function</td><td>Calling a non-callable value</td></tr>
+</table>
+
+<h2 id="grammar">Grammar (BNF)</h2>
