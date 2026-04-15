@@ -246,9 +246,12 @@ STRING     "Ometer"  L1:13</pre>
 <span class="kw">let</span> c = <span class="fn">counter</span>()
 <span class="fn">print</span>(<span class="fn">c</span>())  <span class="cm">// 1</span>
 <span class="fn">print</span>(<span class="fn">c</span>())  <span class="cm">// 2 — n persists in closure</span></pre>
-      <p>The web framework lives entirely inside the VM as native functions. <code>web.create()</code> returns an OmObject with native route registration methods. <code>app.listen()</code> spins up a real Node.js <code>http.createServer</code> and dispatches incoming requests through Ometer functions — calling back into the VM for each route handler.</p>
-    </div>
-  </div>
+          <p>The web framework lives entirely inside the VM as native functions. <code>web.create()</code> returns an
+            OmObject with native route registration methods. <code>app.listen()</code> spins up a real Node.js
+            <code>http.createServer</code> and dispatches incoming requests through Ometer functions — calling back into
+            the VM for each route handler.</p>
+        </div>
+      </div>
 
   <!-- CHAPTER 5 -->
   <div class="chapter">
