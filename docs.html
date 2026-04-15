@@ -401,3 +401,24 @@ x || y   <span class="cm">// OR  — short-circuits, returns actual value</span>
 <span class="cm">// Higher-order</span>
 <span class="kw">fn</span> <span class="fn">apply</span>(f, val) {
   <span class="kw">return</span> <span class="fn">f</span>(val)
+}
+<span class="fn">print</span>(<span class="fn">apply</span>(double, <span class="num">21</span>))  <span class="cm">// 42</span>
+
+<span class="cm">// Closures</span>
+<span class="kw">fn</span> <span class="fn">counter</span>() {
+  <span class="kw">let</span> n = <span class="num">0</span>
+  <span class="kw">return</span> <span class="kw">fn</span>() { n += <span class="num">1</span>; <span class="kw">return</span> n }
+}
+<span class="kw">let</span> c = <span class="fn">counter</span>()
+<span class="fn">print</span>(<span class="fn">c</span>())  <span class="cm">// 1</span>
+<span class="fn">print</span>(<span class="fn">c</span>())  <span class="cm">// 2</span></code></pre>
+
+<!-- ARRAYS -->
+<h2 id="arrays">Arrays</h2>
+<pre><code><span class="kw">let</span> nums = [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>]
+
+<span class="fn">print</span>(nums[<span class="num">0</span>])       <span class="cm">// 1</span>
+<span class="fn">print</span>(nums.<span class="pr">length</span>)   <span class="cm">// 3</span>
+
+nums.<span class="fn">push</span>(<span class="num">4</span>)
+nums.<span class="fn">pop</span>()
