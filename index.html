@@ -473,3 +473,12 @@ pre { font-family: 'DM Mono', monospace; font-size: .8rem; line-height: 1.85; ta
 .cta-band {
   border-top: 1px solid var(--border);
   padding: 120px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-band::before {
+  content: 'OMETER';
+  position: absolute;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22vw;
