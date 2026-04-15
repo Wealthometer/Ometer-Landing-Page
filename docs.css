@@ -310,3 +310,25 @@ pre code {
 ul,
 ol {
   color: var(--slate);
+  padding-left: 20px;
+  margin-bottom: 14px;
+}
+li {
+  line-height: 1.85;
+  font-size: 0.93rem;
+  margin-bottom: 3px;
+}
+
+/* CALLOUT */
+.callout {
+  border-left: 3px solid var(--lime);
+  background: rgba(212, 255, 0, 0.04);
+  padding: 14px 18px;
+  margin: 18px 0;
+  border-radius: 0 4px 4px 0;
+}
+.callout.warn {
+  border-color: #ffd166;
+  background: rgba(255, 209, 102, 0.04);
+}
+.callout p {
