@@ -750,3 +750,26 @@ app.<span class="fn">listen</span>(<span class="num">3000</span>)<span class="cu
           <li>res.json(), res.send(), res.status(), res.html()</li>
           <li>req.body, req.params, req.query, req.headers</li>
           <li>Runs on Node's http module under the hood</li>
+        </ul>
+      </div>
+      <div class="win">
+        <div class="win-bar">
+          <div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div>
+          <span class="win-fname">api.om</span>
+        </div>
+        <div class="win-body">
+<pre><span class="kw">import</span> web
+
+<span class="kw">let</span> app = web.<span class="fn">create</span>()
+<span class="kw">let</span> users = []
+
+app.<span class="fn">get</span>(<span class="str">"/users"</span>, <span class="kw">fn</span>(req, res) {
+  res.<span class="fn">json</span>(users)
+})
+
+app.<span class="fn">get</span>(<span class="str">"/users/:id"</span>, <span class="kw">fn</span>(req, res) {
+  <span class="kw">let</span> id = req.<span class="pr">params</span>.<span class="pr">id</span>
+  res.<span class="fn">json</span>({ id: id })
+})
+
+app.<span class="fn">post</span>(<span class="str">"/users"</span>, <span class="kw">fn</span>(req, res) {
