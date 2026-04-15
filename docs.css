@@ -130,3 +130,55 @@ body {
 }
 .sb-group:first-child .sb-heading {
   border-top: none;
+  margin-top: 0;
+}
+.sb-link {
+  display: block;
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--slate);
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: 2px;
+  transition: all 0.15s;
+  letter-spacing: 0.02em;
+  margin-bottom: 1px;
+}
+.sb-link:hover,
+.sb-link.on {
+  background: var(--ink3);
+  color: var(--white);
+}
+.sb-link.on {
+  color: var(--lime);
+}
+.sb-sub .sb-link {
+  font-size: 0.67rem;
+  padding-left: 20px;
+}
+.sb-version {
+  padding: 16px 24px 0;
+  font-family: "DM Mono", monospace;
+  font-size: 0.62rem;
+  color: var(--lime-d);
+  letter-spacing: 0.05em;
+}
+
+/* CONTENT */
+.content {
+  margin-left: var(--sb);
+  flex: 1;
+  padding: 52px 72px 100px;
+  max-width: 900px;
+}
+
+/* TYPOGRAPHY */
+.doc-hero {
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+.doc-hero .badge {
+  display: inline-block;
+  font-family: "DM Mono", monospace;
+  font-size: 0.62rem;
