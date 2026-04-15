@@ -130,3 +130,31 @@
     .btn-outline {
       border: 1px solid var(--border);
       color: var(--slate);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--lime);
+      color: var(--lime);
+    }
+
+    .btn-solid {
+      background: var(--lime);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .btn-solid:hover {
+      background: var(--white);
+    }
+   
+    .hero {
+      min-height: 100vh;
+      padding: 130px 48px 80px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 520px;
+      gap: 60px;
+      align-items: center;
+      max-width: var(--w);
+      margin: 0 auto;
+    }
