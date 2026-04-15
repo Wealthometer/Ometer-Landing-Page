@@ -32,3 +32,16 @@ body{background:var(--ink);color:var(--white);font-family:'DM Sans',sans-serif;f
 .topbar-badge{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--slate);letter-spacing:.04em}
 .topbar-links{margin-left:auto;display:flex;gap:20px}
 .topbar-links a{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--slate);text-decoration:none;transition:color .2s}
+.topbar-links a:hover{color:var(--lime)}
+.topbar-links a.active{color:var(--lime)}
+
+/* LAYOUT */
+.layout{display:flex;padding-top:56px;flex:1}
+
+/* SIDEBAR */
+.sb{
+  width:var(--sb);flex-shrink:0;
+  position:fixed;top:56px;left:0;bottom:0;
+  overflow-y:auto;
+  background:var(--ink2);
+  border-right:1px solid var(--border);
