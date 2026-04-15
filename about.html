@@ -16,3 +16,7 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--ink);color:var(--white);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden}
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.1) 2px,rgba(0,0,0,.1) 3px);
+  opacity:.3;
