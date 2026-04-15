@@ -487,3 +487,9 @@ s.<span class="pr">length</span>        <span class="cm">// 12</span></code></pr
 app.<span class="fn">post</span>(<span class="str">"/users"</span>, <span class="kw">fn</span>(req, res) {
   res.<span class="fn">status</span>(<span class="num">201</span>).<span class="fn">json</span>({ created: <span class="num">true</span> })
 })
+
+app.<span class="fn">put</span>(<span class="str">"/users/:id"</span>, <span class="kw">fn</span>(req, res) {
+  <span class="kw">let</span> id = req.<span class="pr">params</span>.<span class="pr">id</span>
+  res.<span class="fn">json</span>({ updated: id })
+})
+
