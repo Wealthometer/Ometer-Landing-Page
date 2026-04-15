@@ -531,3 +531,8 @@ app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span 
 <span class="cm">// → 🚀 Ometer server running → http://localhost:3000</span></code></pre>
 
 <hr>
+
+<!-- INTERNALS -->
+<h2 id="pipeline">Compilation Pipeline</h2>
+<pre><code>.om source → Lexer → Tokens → Parser → AST → Compiler → Bytecode → VM → Output</code></pre>
+<p>Each stage is inspectable via the CLI debug commands. The pipeline is strictly linear — no optimization passes in v0.1.</p>
