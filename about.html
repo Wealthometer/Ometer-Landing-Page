@@ -146,3 +146,9 @@ nav.stuck{background:rgba(8,9,12,.93);backdrop-filter:blur(16px);border-color:va
 
 /* TIMELINE */
 .timeline{position:relative;padding-left:32px;margin:24px 0}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--border)}
+.tl-item{position:relative;margin-bottom:28px}
+.tl-item::before{
+  content:'';position:absolute;left:-37px;top:4px;
+  width:10px;height:10px;border-radius:50%;
+  background:var(--lime);border:2px solid var(--ink);
