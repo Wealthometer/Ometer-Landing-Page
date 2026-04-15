@@ -281,3 +281,33 @@ nav.stuck {
   font-size: 0.95rem;
   line-height: 1.85;
   max-width: 680px;
+  margin-bottom: 16px;
+}
+
+/* CHAPTER LAYOUT */
+.chapter {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 60px;
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.chapter:last-child {
+  border-bottom: none;
+}
+.ch-num {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
+  color: var(--lime-d);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  position: sticky;
+  top: 80px;
+}
+.ch-content h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+  color: var(--lime);
