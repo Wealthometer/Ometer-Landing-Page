@@ -458,40 +458,114 @@ app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span 
       <pre><code>app.<span class="fn">listen</span>(<span class="num">3000</span>)
 <span class="cm">// → 🚀 Ometer server running → http://localhost:3000</span></code></pre>
 
-<hr>
+      <hr>
 
-<!-- INTERNALS -->
-<h2 id="pipeline">Compilation Pipeline</h2>
-<pre><code>.om source → Lexer → Tokens → Parser → AST → Compiler → Bytecode → VM → Output</code></pre>
-<p>Each stage is inspectable via the CLI debug commands. The pipeline is strictly linear — no optimization passes in v0.1.</p>
+      <!-- INTERNALS -->
+      <h2 id="pipeline">Compilation Pipeline</h2>
+      <pre><code>.om source → Lexer → Tokens → Parser → AST → Compiler → Bytecode → VM → Output</code></pre>
+      <p>Each stage is inspectable via the CLI debug commands. The pipeline is strictly linear — no optimization passes
+        in v0.1.</p>
 
-<h2 id="opcodes">Bytecode Opcodes</h2>
-<div class="op-grid">
-  <div class="op-card"><div class="op-name">PUSH</div><div class="op-args">&lt;value&gt;</div><div class="op-desc">Push constant onto stack</div></div>
-  <div class="op-card"><div class="op-name">POP</div><div class="op-desc">Discard top of stack</div></div>
-  <div class="op-card"><div class="op-name">DUP</div><div class="op-desc">Duplicate top of stack</div></div>
-  <div class="op-card"><div class="op-name">LOAD / STORE / DEFINE</div><div class="op-args">&lt;name&gt;</div><div class="op-desc">Variable read, write, declare</div></div>
-  <div class="op-card"><div class="op-name">ADD / SUB / MUL / DIV</div><div class="op-desc">Binary arithmetic</div></div>
-  <div class="op-card"><div class="op-name">MOD / POW / NEG / NOT</div><div class="op-desc">Modulo, power, unary operators</div></div>
-  <div class="op-card"><div class="op-name">EQ / NEQ / LT / GT / LTE / GTE</div><div class="op-desc">Comparison — pushes bool result</div></div>
-  <div class="op-card"><div class="op-name">JUMP</div><div class="op-args">&lt;idx&gt;</div><div class="op-desc">Unconditional jump</div></div>
-  <div class="op-card"><div class="op-name">JUMP_IF_FALSE</div><div class="op-args">&lt;idx&gt;</div><div class="op-desc">Jump if top of stack is falsy</div></div>
-  <div class="op-card"><div class="op-name">JUMP_IF_TRUE</div><div class="op-args">&lt;idx&gt;</div><div class="op-desc">Used for short-circuit ||</div></div>
-  <div class="op-card"><div class="op-name">MAKE_FN</div><div class="op-args">&lt;name&gt; &lt;arity&gt; &lt;chunk&gt;</div><div class="op-desc">Push a function value</div></div>
-  <div class="op-card"><div class="op-name">CALL</div><div class="op-args">&lt;argCount&gt;</div><div class="op-desc">Call function below args on stack</div></div>
-  <div class="op-card"><div class="op-name">RETURN</div><div class="op-desc">Return top of stack from frame</div></div>
-  <div class="op-card"><div class="op-name">MAKE_ARRAY</div><div class="op-args">&lt;count&gt;</div><div class="op-desc">Pop N items, push array</div></div>
-  <div class="op-card"><div class="op-name">MAKE_OBJECT</div><div class="op-args">&lt;count&gt;</div><div class="op-desc">Pop N key-value pairs, push object</div></div>
-  <div class="op-card"><div class="op-name">GET_MEMBER / SET_MEMBER</div><div class="op-args">&lt;prop&gt;</div><div class="op-desc">Dot access on objects</div></div>
-  <div class="op-card"><div class="op-name">GET_INDEX / SET_INDEX</div><div class="op-desc">Bracket access on arrays/objects</div></div>
-  <div class="op-card"><div class="op-name">ITER_INIT / ITER_NEXT</div><div class="op-desc">for-in loop iteration</div></div>
-  <div class="op-card"><div class="op-name">PRINT</div><div class="op-desc">Pop and write to stdout</div></div>
-  <div class="op-card"><div class="op-name">IMPORT</div><div class="op-args">&lt;module&gt;</div><div class="op-desc">Load stdlib module onto stack</div></div>
-</div>
+      <h2 id="opcodes">Bytecode Opcodes</h2>
+      <div class="op-grid">
+        <div class="op-card">
+          <div class="op-name">PUSH</div>
+          <div class="op-args">&lt;value&gt;</div>
+          <div class="op-desc">Push constant onto stack</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">POP</div>
+          <div class="op-desc">Discard top of stack</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">DUP</div>
+          <div class="op-desc">Duplicate top of stack</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">LOAD / STORE / DEFINE</div>
+          <div class="op-args">&lt;name&gt;</div>
+          <div class="op-desc">Variable read, write, declare</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">ADD / SUB / MUL / DIV</div>
+          <div class="op-desc">Binary arithmetic</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">MOD / POW / NEG / NOT</div>
+          <div class="op-desc">Modulo, power, unary operators</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">EQ / NEQ / LT / GT / LTE / GTE</div>
+          <div class="op-desc">Comparison — pushes bool result</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">JUMP</div>
+          <div class="op-args">&lt;idx&gt;</div>
+          <div class="op-desc">Unconditional jump</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">JUMP_IF_FALSE</div>
+          <div class="op-args">&lt;idx&gt;</div>
+          <div class="op-desc">Jump if top of stack is falsy</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">JUMP_IF_TRUE</div>
+          <div class="op-args">&lt;idx&gt;</div>
+          <div class="op-desc">Used for short-circuit ||</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">MAKE_FN</div>
+          <div class="op-args">&lt;name&gt; &lt;arity&gt; &lt;chunk&gt;</div>
+          <div class="op-desc">Push a function value</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">CALL</div>
+          <div class="op-args">&lt;argCount&gt;</div>
+          <div class="op-desc">Call function below args on stack</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">RETURN</div>
+          <div class="op-desc">Return top of stack from frame</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">MAKE_ARRAY</div>
+          <div class="op-args">&lt;count&gt;</div>
+          <div class="op-desc">Pop N items, push array</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">MAKE_OBJECT</div>
+          <div class="op-args">&lt;count&gt;</div>
+          <div class="op-desc">Pop N key-value pairs, push object</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">GET_MEMBER / SET_MEMBER</div>
+          <div class="op-args">&lt;prop&gt;</div>
+          <div class="op-desc">Dot access on objects</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">GET_INDEX / SET_INDEX</div>
+          <div class="op-desc">Bracket access on arrays/objects</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">ITER_INIT / ITER_NEXT</div>
+          <div class="op-desc">for-in loop iteration</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">PRINT</div>
+          <div class="op-desc">Pop and write to stdout</div>
+        </div>
+        <div class="op-card">
+          <div class="op-name">IMPORT</div>
+          <div class="op-args">&lt;module&gt;</div>
+          <div class="op-desc">Load stdlib module onto stack</div>
+        </div>
+      </div>
 
-<h2 id="vm-detail">VM Architecture</h2>
-<p>The VM is stack-based with a linked call-frame system. Each function call creates a new <strong>Frame</strong> with its own instruction pointer, value stack, and <strong>Scope</strong>. Scopes are linked-list environments — variable lookup walks up the chain until the global scope.</p>
-<pre><code><span class="cm">// Call frame structure:</span>
+      <h2 id="vm-detail">VM Architecture</h2>
+      <p>The VM is stack-based with a linked call-frame system. Each function call creates a new <strong>Frame</strong>
+        with its own instruction pointer, value stack, and <strong>Scope</strong>. Scopes are linked-list environments —
+        variable lookup walks up the chain until the global scope.</p>
+      <pre><code><span class="cm">// Call frame structure:</span>
 Frame {
   chunk:  Chunk    <span class="cm">// compiled bytecode</span>
   ip:     number   <span class="cm">// instruction pointer</span>
