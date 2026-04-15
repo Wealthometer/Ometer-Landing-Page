@@ -270,7 +270,11 @@ STRING     "Ometer"  L1:13</pre>
   <span class="kw">let</span> id = req.<span class="num">params</span>.<span class="num">id</span>   <span class="cm">// "42" from /users/42</span>
   res.<span class="fn">json</span>({ id: id })
 })</pre>
-      <p>The middleware chain is an ordered array of Ometer functions. Each receives <code>(req, res, next)</code> where <code>next</code> is a native closure that advances the handler index. Route handlers sit at the end of the chain and receive only <code>(req, res)</code>.</p>
+          <p>The middleware chain is an ordered array of Ometer functions. Each receives <code>(req, res, next)</code>
+            where <code>next</code> is a native closure that advances the handler index. Route handlers sit at the end
+            of the chain and receive only <code>(req, res)</code>.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
