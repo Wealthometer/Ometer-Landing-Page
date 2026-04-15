@@ -16,80 +16,84 @@
   </style>
 </head>
 
-<!-- TOPBAR -->
-<header class="topbar">
-  <a href="index.html" class="topbar-logo">OM<b>ETER</b></a>
-  <span class="topbar-sep">/</span>
-  <span class="topbar-badge">Documentation</span>
-  <div class="topbar-links">
-    <a href="index.html">Home</a>
-    <a href="docs.html" class="active">Docs</a>
-    <a href="about.html">About</a>
-    <a href="#">GitHub</a>
-  </div>
-</header>
+<body>
 
-<div class="layout">
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <a href="index.html" class="topbar-logo">OM<b>ETER</b></a>
+    <span class="topbar-sep">/</span>
+    <span class="topbar-badge">Documentation</span>
+    <div class="topbar-links">
+      <a href="index.html">Home</a>
+      <a href="docs.html" class="active">Docs</a>
+      <a href="about.html">About</a>
+      <a href="#">GitHub</a>
+    </div>
+  </header>
 
-<!-- SIDEBAR -->
-<aside class="sb">
-  <div class="sb-version">v0.1.0 — stable</div>
-  <div class="sb-group">
-    <div class="sb-heading">Getting Started</div>
-    <a href="#intro" class="sb-link on">Introduction</a>
-    <a href="#install" class="sb-link">Installation</a>
-    <a href="#hello" class="sb-link">Hello World</a>
-    <a href="#cli" class="sb-link">CLI Reference</a>
-  </div>
-  <div class="sb-group">
-    <div class="sb-heading">Language</div>
-    <a href="#syntax" class="sb-link">Syntax Overview</a>
-    <a href="#variables" class="sb-link">Variables</a>
-    <a href="#types" class="sb-link">Types</a>
-    <a href="#operators" class="sb-link">Operators</a>
-    <a href="#control" class="sb-link">Control Flow</a>
-    <a href="#functions" class="sb-link">Functions</a>
-    <a href="#arrays" class="sb-link">Arrays</a>
-    <a href="#objects" class="sb-link">Objects</a>
-    <a href="#imports" class="sb-link">Imports</a>
-    <a href="#builtins" class="sb-link">Built-ins</a>
-  </div>
-  <div class="sb-group">
-    <div class="sb-heading">Web Framework</div>
-    <a href="#web" class="sb-link">web.create()</a>
-    <a href="#routing" class="sb-link">Routing</a>
-    <a href="#middleware" class="sb-link">Middleware</a>
-    <a href="#request" class="sb-link">Request</a>
-    <a href="#response" class="sb-link">Response</a>
-    <a href="#listen" class="sb-link">app.listen()</a>
-  </div>
-  <div class="sb-group">
-    <div class="sb-heading">Internals</div>
-    <a href="#pipeline" class="sb-link">Pipeline</a>
-    <a href="#opcodes" class="sb-link">Bytecode Opcodes</a>
-    <a href="#vm-detail" class="sb-link">VM Architecture</a>
-  </div>
-  <div class="sb-group">
-    <div class="sb-heading">Reference</div>
-    <a href="#keywords" class="sb-link">Keywords</a>
-    <a href="#errors" class="sb-link">Error Messages</a>
-    <a href="#grammar" class="sb-link">Grammar (BNF)</a>
-  </div>
-</aside>
+  <div class="layout">
 
-<!-- MAIN -->
-<main class="content">
+    <!-- SIDEBAR -->
+    <aside class="sb">
+      <div class="sb-version">v0.1.0 — stable</div>
+      <div class="sb-group">
+        <div class="sb-heading">Getting Started</div>
+        <a href="#intro" class="sb-link on">Introduction</a>
+        <a href="#install" class="sb-link">Installation</a>
+        <a href="#hello" class="sb-link">Hello World</a>
+        <a href="#cli" class="sb-link">CLI Reference</a>
+      </div>
+      <div class="sb-group">
+        <div class="sb-heading">Language</div>
+        <a href="#syntax" class="sb-link">Syntax Overview</a>
+        <a href="#variables" class="sb-link">Variables</a>
+        <a href="#types" class="sb-link">Types</a>
+        <a href="#operators" class="sb-link">Operators</a>
+        <a href="#control" class="sb-link">Control Flow</a>
+        <a href="#functions" class="sb-link">Functions</a>
+        <a href="#arrays" class="sb-link">Arrays</a>
+        <a href="#objects" class="sb-link">Objects</a>
+        <a href="#imports" class="sb-link">Imports</a>
+        <a href="#builtins" class="sb-link">Built-ins</a>
+      </div>
+      <div class="sb-group">
+        <div class="sb-heading">Web Framework</div>
+        <a href="#web" class="sb-link">web.create()</a>
+        <a href="#routing" class="sb-link">Routing</a>
+        <a href="#middleware" class="sb-link">Middleware</a>
+        <a href="#request" class="sb-link">Request</a>
+        <a href="#response" class="sb-link">Response</a>
+        <a href="#listen" class="sb-link">app.listen()</a>
+      </div>
+      <div class="sb-group">
+        <div class="sb-heading">Internals</div>
+        <a href="#pipeline" class="sb-link">Pipeline</a>
+        <a href="#opcodes" class="sb-link">Bytecode Opcodes</a>
+        <a href="#vm-detail" class="sb-link">VM Architecture</a>
+      </div>
+      <div class="sb-group">
+        <div class="sb-heading">Reference</div>
+        <a href="#keywords" class="sb-link">Keywords</a>
+        <a href="#errors" class="sb-link">Error Messages</a>
+        <a href="#grammar" class="sb-link">Grammar (BNF)</a>
+      </div>
+    </aside>
 
-<div class="doc-hero" id="intro">
-  <div class="badge">v0.1.0 — Language Reference</div>
-  <h1>Ometer Docs</h1>
-  <p>Ometer is a dynamically typed, web-first programming language with a custom syntax, bytecode compiler, and its own virtual machine — built entirely in TypeScript.</p>
-</div>
+    <!-- MAIN -->
+    <main class="content">
 
-<!-- INSTALL -->
-<h2 id="install">Installation</h2>
-<p>Ometer requires <strong>Node.js 18+</strong>. No global installs needed — everything runs through <code>ts-node</code>.</p>
-<pre><span class="pre-lang">bash</span><code><span class="cm"># Clone and enter</span>
+      <div class="doc-hero" id="intro">
+        <div class="badge">v0.1.0 — Language Reference</div>
+        <h1>Ometer Docs</h1>
+        <p>Ometer is a dynamically typed, web-first programming language with a custom syntax, bytecode compiler, and
+          its own virtual machine — built entirely in TypeScript.</p>
+      </div>
+
+      <!-- INSTALL -->
+      <h2 id="install">Installation</h2>
+      <p>Ometer requires <strong>Node.js 18+</strong>. No global installs needed — everything runs through
+        <code>ts-node</code>.</p>
+      <pre><span class="pre-lang">bash</span><code><span class="cm"># Clone and enter</span>
 git clone https://github.com/you/ometer.git && cd ometer
 
 <span class="cm"># Install deps</span>
