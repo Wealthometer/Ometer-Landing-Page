@@ -182,3 +182,46 @@ body {
   display: inline-block;
   font-family: "DM Mono", monospace;
   font-size: 0.62rem;
+  color: var(--lime);
+  border: 1px solid var(--lime-d);
+  padding: 4px 12px;
+  border-radius: 2px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.doc-hero h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3.2rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.doc-hero p {
+  color: var(--slate);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.03em;
+  margin: 52px 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 72px;
+}
+h3 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 28px 0 10px;
+  color: var(--white);
+  scroll-margin-top: 72px;
+}
+h4 {
+  font-family: "DM Mono", monospace;
+  font-size: 0.78rem;
+  color: var(--lime);
