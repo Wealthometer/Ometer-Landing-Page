@@ -46,3 +46,36 @@
           rgba(0, 0, 0, 0.12) 3px);
       opacity: 0.35;
     }
+
+    .z1 {
+      position: relative;
+      z-index: 1;
+    }
+   
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 500;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      padding: 0 48px;
+      border-bottom: 1px solid transparent;
+      transition: background .3s, border-color .3s;
+    }
+
+    nav.stuck {
+      background: rgba(8, 9, 12, .92);
+      backdrop-filter: blur(16px);
+      border-color: var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: .06em;
+      color: var(--lime);
+      text-decoration: none;
+      line-height: 1;
