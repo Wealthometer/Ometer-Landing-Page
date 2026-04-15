@@ -872,3 +872,33 @@
         text-align: center;
       }
     }
+
+    .fa-fire
+    {
+      color: #FF3B30;
+    }
+
+    .fa-globe
+    {
+      color: #FFBD2E;
+    }
+
+    .fa-bolt
+    {
+      color: #F78C6C;
+    }
+
+    .fa-hammer
+    {
+      color: #C3E88D;
+    }
+
+    .fa-microscope
+    {
+      color: #82AAFF;
+    }
+
+    .fa-handshake
+    {
+      color: #C792EA;
+    }
