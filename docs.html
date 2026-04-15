@@ -366,3 +366,17 @@ x || y   <span class="cm">// OR  — short-circuits, returns actual value</span>
 }</code></pre>
 <h3>while</h3>
 <pre><code><span class="kw">let</span> i = <span class="num">0</span>
+<span class="kw">while</span> (i < <span class="num">5</span>) {
+  <span class="fn">print</span>(i)
+  i += <span class="num">1</span>
+}</code></pre>
+<h3>for-in</h3>
+<pre><code><span class="kw">let</span> fruits = [<span class="str">"apple"</span>, <span class="str">"banana"</span>, <span class="str">"cherry"</span>]
+<span class="kw">for</span> (fruit <span class="kw">in</span> fruits) {
+  <span class="fn">print</span>(fruit)
+}
+
+<span class="cm">// Works on objects too — iterates over keys</span>
+<span class="kw">let</span> user = { name: <span class="str">"Om"</span>, age: <span class="num">1</span> }
+<span class="kw">for</span> (key <span class="kw">in</span> user) {
+  <span class="fn">print</span>(key)
