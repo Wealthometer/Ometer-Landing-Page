@@ -634,3 +634,9 @@ postfix       → primary (call | "." IDENT | "[" expr "]")*
 primary       → NUMBER | STRING | BOOL | NULL | IDENT
               | "fn" "(" params ")" block
               | "[" (expr ("," expr)*)? "]"
+              | "{" (IDENT ":" expr ("," IDENT ":" expr)*)? "}"
+              | "(" expr ")"</code></pre>
+
+</main>
+</div>
+
