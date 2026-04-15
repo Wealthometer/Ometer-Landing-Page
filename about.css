@@ -149,3 +149,21 @@ nav.stuck {
   border: 1px solid var(--lime-d);
   padding: 4px 14px;
   border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.ah-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+}
+.ah-title span {
+  color: var(--lime);
+  display: block;
+}
+.ah-sub {
+  color: var(--slate);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-top: 24px;
