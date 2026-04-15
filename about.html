@@ -216,7 +216,8 @@ STRING     "Ometer"  L1:13</pre>
           <p>The most interesting part is <strong>jump back-patching</strong>. When compiling a while loop, the compiler
             emits a <code>JUMP_IF_FALSE</code> with a placeholder target, compiles the loop body, emits a backward
             <code>JUMP</code>, then patches the exit jump to point to the instruction after the loop. The same technique
-            handles break and continue.</p>
+            handles break and continue.
+          </p>
           <pre><span class="cm">// while (i < 3) { print(i) } compiles to:</span>
 0000  LOAD        <span class="str">"i"</span>
 0001  PUSH        <span class="num">3</span>
