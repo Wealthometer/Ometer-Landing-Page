@@ -548,3 +548,65 @@ nav.stuck {
 /* FOOTER */
 footer {
   border-top: 1px solid var(--border);
+  padding: 36px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer p {
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  color: var(--slate);
+}
+.fl {
+  display: flex;
+  gap: 28px;
+}
+.fl a {
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  color: var(--slate);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.fl a:hover {
+  color: var(--lime);
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 0 24px;
+  }
+  .nav-c {
+    display: none;
+  }
+  .about-hero {
+    grid-template-columns: 1fr;
+    padding: 110px 24px 60px;
+    gap: 40px;
+  }
+  .section,
+  .section-full {
+    padding: 60px 24px;
+  }
+  .chapter {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .ch-num {
+    font-size: 3rem;
+    position: static;
+  }
+  .decision-grid {
+    grid-template-columns: 1fr;
+  }
+  .principles {
+    grid-template-columns: 1fr;
+  }
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+}
