@@ -375,9 +375,9 @@ app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span 
   res.<span class="fn">json</span>({ deleted: req.<span class="pr">params</span>.<span class="pr">id</span> })
 })</code></pre>
 
-<h2 id="middleware">Middleware</h2>
-<p>Middleware receives <code>(req, res, next)</code>. Call <code>next()</code> to pass to the next handler.</p>
-<pre><code>app.<span class="fn">use</span>(<span class="kw">fn</span>(req, res, next) {
+      <h2 id="middleware">Middleware</h2>
+      <p>Middleware receives <code>(req, res, next)</code>. Call <code>next()</code> to pass to the next handler.</p>
+      <pre><code>app.<span class="fn">use</span>(<span class="kw">fn</span>(req, res, next) {
   <span class="fn">print</span>(req.<span class="pr">method</span> + <span class="str">" "</span> + req.<span class="pr">path</span>)
   <span class="fn">next</span>()
 })</code></pre>
