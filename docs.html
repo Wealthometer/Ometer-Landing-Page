@@ -594,3 +594,12 @@ globalScope → functionScope → blockScope</code></pre>
 
 <h2 id="errors">Error Messages</h2>
 <div class="callout warn">
+  <span class="callout-label">⚠ Tip</span>
+  <p>All errors include a line number. Run <code>ometer lex</code> or <code>ometer parse</code> to isolate which stage failed.</p>
+</div>
+<table>
+  <tr><th>Error</th><th>Cause</th></tr>
+  <tr><td>LexerError: Unexpected character</td><td>Invalid character in source</td></tr>
+  <tr><td>LexerError: Unterminated string</td><td>Missing closing quote</td></tr>
+  <tr><td>ParseError: Expected '('</td><td>Missing paren after if/while/fn</td></tr>
+  <tr><td>ParseError: Invalid assignment target</td><td>Left side of = is not assignable</td></tr>
