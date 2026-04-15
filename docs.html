@@ -503,3 +503,12 @@ app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span 
   <span class="fn">print</span>(req.<span class="pr">method</span> + <span class="str">" "</span> + req.<span class="pr">path</span>)
   <span class="fn">next</span>()
 })</code></pre>
+
+<h2 id="request">Request Object</h2>
+<table>
+  <tr><th>Property</th><th>Type</th><th>Description</th></tr>
+  <tr><td>req.method</td><td>String</td><td>HTTP method: GET, POST, PUT, DELETE</td></tr>
+  <tr><td>req.path</td><td>String</td><td>URL path (no query string)</td></tr>
+  <tr><td>req.url</td><td>String</td><td>Full URL including query string</td></tr>
+  <tr><td>req.body</td><td>Object</td><td>Parsed JSON request body</td></tr>
+  <tr><td>req.params</td><td>Object</td><td>URL parameters (e.g. :id)</td></tr>
