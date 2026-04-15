@@ -523,3 +523,28 @@
     }
 
     .feat-n {
+      font-family: 'DM Mono', monospace;
+      font-size: .6rem;
+      color: var(--lime-d);
+      letter-spacing: .1em;
+      margin-bottom: 18px;
+    }
+
+    .feat-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .feat h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: .04em;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .feat p {
+      color: var(--slate);
+      font-size: .88rem;
+      line-height: 1.75;
