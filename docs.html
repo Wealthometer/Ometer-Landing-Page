@@ -628,3 +628,9 @@ equality      → comparison (("==" | "!=") comparison)*
 comparison    → addition (("<" | ">" | "<=" | ">=") addition)*
 addition      → multiplication (("+" | "-") multiplication)*
 multiplication→ power (("*" | "/" | "%") power)*
+power         → unary ("**" unary)*
+unary         → ("!" | "-") unary | postfix
+postfix       → primary (call | "." IDENT | "[" expr "]")*
+primary       → NUMBER | STRING | BOOL | NULL | IDENT
+              | "fn" "(" params ")" block
+              | "[" (expr ("," expr)*)? "]"
