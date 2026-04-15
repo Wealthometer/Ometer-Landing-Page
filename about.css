@@ -84,3 +84,29 @@ nav.stuck {
   gap: 32px;
   position: absolute;
   left: 50%;
+  transform: translateX(-50%);
+}
+.nav-c a {
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--slate);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-c a:hover,
+.nav-c a.on {
+  color: var(--lime);
+}
+.nav-r {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.btn-o {
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
