@@ -227,14 +227,18 @@ STRING     "Ometer"  L1:13</pre>
         </div>
       </div>
 
-  <!-- CHAPTER 4 -->
-  <div class="chapter">
-    <div class="ch-num">04</div>
-    <div class="ch-content">
-      <h3>The Virtual Machine</h3>
-      <p>The VM in <strong>vm.ts</strong> is a stack-based interpreter. It maintains a <strong>frame stack</strong> — each function call creates a new Frame with its own instruction pointer, value stack, and Scope. Frames are pushed on CALL and popped on RETURN.</p>
-      <p>Scopes are implemented as linked-list environments. Variable lookup walks the chain from the current scope up to the global scope. This gives Ometer proper <strong>lexical scoping and closures</strong> — functions capture the scope they were defined in via <code>fn.closure</code>.</p>
-      <pre><span class="cm">// Closure example — works correctly:</span>
+      <!-- CHAPTER 4 -->
+      <div class="chapter">
+        <div class="ch-num">04</div>
+        <div class="ch-content">
+          <h3>The Virtual Machine</h3>
+          <p>The VM in <strong>vm.ts</strong> is a stack-based interpreter. It maintains a <strong>frame stack</strong>
+            — each function call creates a new Frame with its own instruction pointer, value stack, and Scope. Frames
+            are pushed on CALL and popped on RETURN.</p>
+          <p>Scopes are implemented as linked-list environments. Variable lookup walks the chain from the current scope
+            up to the global scope. This gives Ometer proper <strong>lexical scoping and closures</strong> — functions
+            capture the scope they were defined in via <code>fn.closure</code>.</p>
+          <pre><span class="cm">// Closure example — works correctly:</span>
 <span class="kw">fn</span> <span class="fn">counter</span>() {
   <span class="kw">let</span> n = <span class="num">0</span>
   <span class="kw">return</span> <span class="kw">fn</span>() { n += <span class="num">1</span>; <span class="kw">return</span> n }
