@@ -536,3 +536,9 @@ app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span 
 <h2 id="pipeline">Compilation Pipeline</h2>
 <pre><code>.om source → Lexer → Tokens → Parser → AST → Compiler → Bytecode → VM → Output</code></pre>
 <p>Each stage is inspectable via the CLI debug commands. The pipeline is strictly linear — no optimization passes in v0.1.</p>
+
+<h2 id="opcodes">Bytecode Opcodes</h2>
+<div class="op-grid">
+  <div class="op-card"><div class="op-name">PUSH</div><div class="op-args">&lt;value&gt;</div><div class="op-desc">Push constant onto stack</div></div>
+  <div class="op-card"><div class="op-name">POP</div><div class="op-desc">Discard top of stack</div></div>
+  <div class="op-card"><div class="op-name">DUP</div><div class="op-desc">Duplicate top of stack</div></div>
