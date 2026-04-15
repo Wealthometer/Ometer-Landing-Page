@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --ink: #08090c;
+  --ink2: #0f1117;
+  --ink3: #161b26;
+  --lime: #d4ff00;
+  --lime2: #aacc00;
+  --lime-d: #2a3300;
+  --slate: #8896a8;
+  --fog: #c8d4e0;
+  --white: #f4f8ff;
+  --border: #1e2535;
+  --sb: 272px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--ink);
+  color: var(--white);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
