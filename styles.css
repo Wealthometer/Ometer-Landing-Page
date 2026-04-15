@@ -596,3 +596,30 @@
       color: var(--lime);
       letter-spacing: .04em;
       margin-bottom: 8px;
+    }
+
+    .pipe-desc {
+      font-size: .82rem;
+      color: var(--slate);
+      line-height: 1.65;
+    }
+
+    .pipe-tag {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: 'DM Mono', monospace;
+      font-size: .6rem;
+      color: var(--slate);
+      background: var(--ink3);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: 2px;
+    }
+   
+    .demo-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
