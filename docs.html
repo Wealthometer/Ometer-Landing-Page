@@ -522,3 +522,12 @@ app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span 
   <tr><td>res.send(text)</td><td>Send plain text (Content-Type: text/plain)</td></tr>
   <tr><td>res.json(obj)</td><td>Send JSON response (Content-Type: application/json)</td></tr>
   <tr><td>res.html(str)</td><td>Send HTML response (Content-Type: text/html)</td></tr>
+  <tr><td>res.status(code)</td><td>Set HTTP status code — chainable: res.status(404).json({...})</td></tr>
+  <tr><td>res.redirect(url)</td><td>Send 302 redirect to URL</td></tr>
+</table>
+
+<h2 id="listen">app.listen(port)</h2>
+<pre><code>app.<span class="fn">listen</span>(<span class="num">3000</span>)
+<span class="cm">// → 🚀 Ometer server running → http://localhost:3000</span></code></pre>
+
+<hr>
