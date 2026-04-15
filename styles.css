@@ -576,3 +576,23 @@
       font-size: 1.2rem;
       font-family: 'DM Mono', monospace;
       z-index: 2;
+    }
+
+    .pipe-step:last-child .pipe-arrow {
+      display: none;
+    }
+
+    .pipe-n {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: var(--lime-d);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .pipe-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      color: var(--lime);
+      letter-spacing: .04em;
+      margin-bottom: 8px;
