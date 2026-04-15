@@ -112,23 +112,42 @@ npx ts-node src/cli.ts help</code></pre>
       <pre><span class="pre-lang">terminal</span><code>npx ts-node src/cli.ts run hello.om
 <span class="cm">→ Hello, World!</span></code></pre>
 
-<!-- CLI -->
-<h2 id="cli">CLI Reference</h2>
-<table>
-  <tr><th>Command</th><th>Description</th></tr>
-  <tr><td>ometer run &lt;file&gt;</td><td>Execute an Ometer source file end-to-end</td></tr>
-  <tr><td>ometer lex &lt;file&gt;</td><td>Print the token stream (debug)</td></tr>
-  <tr><td>ometer parse &lt;file&gt;</td><td>Print the AST as JSON (debug)</td></tr>
-  <tr><td>ometer compile &lt;file&gt;</td><td>Print bytecode disassembly (debug)</td></tr>
-  <tr><td>ometer help</td><td>Show usage information</td></tr>
-</table>
+      <!-- CLI -->
+      <h2 id="cli">CLI Reference</h2>
+      <table>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>ometer run &lt;file&gt;</td>
+          <td>Execute an Ometer source file end-to-end</td>
+        </tr>
+        <tr>
+          <td>ometer lex &lt;file&gt;</td>
+          <td>Print the token stream (debug)</td>
+        </tr>
+        <tr>
+          <td>ometer parse &lt;file&gt;</td>
+          <td>Print the AST as JSON (debug)</td>
+        </tr>
+        <tr>
+          <td>ometer compile &lt;file&gt;</td>
+          <td>Print bytecode disassembly (debug)</td>
+        </tr>
+        <tr>
+          <td>ometer help</td>
+          <td>Show usage information</td>
+        </tr>
+      </table>
 
-<hr>
+      <hr>
 
-<!-- SYNTAX -->
-<h2 id="syntax">Syntax Overview</h2>
-<p>Ometer uses curly-brace blocks, C-style operators, and its own keyword set. Files use the <code>.om</code> extension. Comments use <code>//</code> or <code>/* */</code>.</p>
-<pre><code><span class="cm">// Single-line comment</span>
+      <!-- SYNTAX -->
+      <h2 id="syntax">Syntax Overview</h2>
+      <p>Ometer uses curly-brace blocks, C-style operators, and its own keyword set. Files use the <code>.om</code>
+        extension. Comments use <code>//</code> or <code>/* */</code>.</p>
+      <pre><code><span class="cm">// Single-line comment</span>
 <span class="cm">/* Multi-line
    comment */</span>
 
