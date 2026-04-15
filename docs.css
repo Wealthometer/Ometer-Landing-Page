@@ -368,3 +368,31 @@ th {
 td {
   padding: 9px 14px;
   border-bottom: 1px solid var(--border);
+  color: var(--slate);
+  font-family: "DM Mono", monospace;
+  font-size: 0.76rem;
+  vertical-align: top;
+  line-height: 1.6;
+}
+tr:hover td {
+  background: var(--ink2);
+}
+td:first-child {
+  color: var(--white);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 40px 0;
+}
+
+/* OPCODE GRID */
+.op-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin: 14px 0 28px;
+}
+.op-card {
+  background: var(--ink2);
