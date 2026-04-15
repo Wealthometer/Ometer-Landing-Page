@@ -261,3 +261,10 @@ pre { font-family: 'DM Mono', monospace; font-size: .8rem; line-height: 1.85; ta
 .op  { color: var(--lime); }
 .pr  { color: #89DDFF; }
 
+/* Typing cursor blink */
+.cursor-blink::after {
+  content: '▋';
+  color: var(--lime);
+  animation: blink 1s step-end infinite;
+}
+
