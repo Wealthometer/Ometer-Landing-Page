@@ -157,3 +157,27 @@ nav.stuck {
   background: var(--lime);
   border-radius: 50%;
   animation: blink 1.4s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4.5rem, 9vw, 8.5rem);
+  line-height: .9;
+  letter-spacing: .02em;
+  opacity: 0; animation: up .6s .2s forwards;
+}
+.hero-title .accent { color: var(--lime); display: block; }
+.hero-title .thin {
+  -webkit-text-stroke: 1px rgba(244,248,255,.25);
+  color: transparent;
+  display: block;
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--slate);
+  line-height: 1.8;
+  max-width: 480px;
+  margin-top: 24px;
+  opacity: 0; animation: up .6s .35s forwards;
