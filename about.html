@@ -144,14 +144,19 @@
       <p class="body-text">Ometer was built in strict pipeline order. Each layer depends only on the output of the
         previous one. No layer was started until the previous one was fully tested.</p>
 
-  <!-- CHAPTER 1 -->
-  <div class="chapter">
-    <div class="ch-num">01</div>
-    <div class="ch-content">
-      <h3>The Lexer</h3>
-      <p>The first step was turning raw <code>.om</code> source text into a flat list of typed tokens. The Lexer in <strong>lexer.ts</strong> is a single-pass character scanner that recognises keywords, identifiers, string literals (with escape sequences), numbers (integers and floats), all operators including compound ones (<code>+=</code>, <code>**</code>, <code>-&gt;</code>), and single/block comments.</p>
-      <p>Every token carries its type, raw value, and a <strong>line:column</strong> position — critical for error messages in every downstream layer. The Lexer throws a <code>LexerError</code> on unknown characters or unterminated strings.</p>
-      <pre><span class="cm">// Input: let name = "Ometer"
+      <!-- CHAPTER 1 -->
+      <div class="chapter">
+        <div class="ch-num">01</div>
+        <div class="ch-content">
+          <h3>The Lexer</h3>
+          <p>The first step was turning raw <code>.om</code> source text into a flat list of typed tokens. The Lexer in
+            <strong>lexer.ts</strong> is a single-pass character scanner that recognises keywords, identifiers, string
+            literals (with escape sequences), numbers (integers and floats), all operators including compound ones
+            (<code>+=</code>, <code>**</code>, <code>-&gt;</code>), and single/block comments.</p>
+          <p>Every token carries its type, raw value, and a <strong>line:column</strong> position — critical for error
+            messages in every downstream layer. The Lexer throws a <code>LexerError</code> on unknown characters or
+            unterminated strings.</p>
+          <pre><span class="cm">// Input: let name = "Ometer"
 // Output token stream:</span>
 LET        "let"     L1:1
 IDENT      "name"    L1:5
