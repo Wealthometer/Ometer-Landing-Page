@@ -471,3 +471,27 @@
       letter-spacing: .02em;
       line-height: .95;
       margin-bottom: 20px;
+    }
+
+    .section-sub {
+      color: var(--slate);
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 60px;
+    }
+   
+    .features-wrap {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-left: 1px solid var(--border);
+    }
+
+    .feat {
+      padding: 40px 32px;
+      border-right: 1px solid var(--border);
