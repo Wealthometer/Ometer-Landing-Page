@@ -481,3 +481,9 @@ s.<span class="pr">length</span>        <span class="cm">// 12</span></code></pr
 
 <h2 id="routing">Routing</h2>
 <pre><code>app.<span class="fn">get</span>(<span class="str">"/users"</span>, <span class="kw">fn</span>(req, res) {
+  res.<span class="fn">json</span>([])
+})
+
+app.<span class="fn">post</span>(<span class="str">"/users"</span>, <span class="kw">fn</span>(req, res) {
+  res.<span class="fn">status</span>(<span class="num">201</span>).<span class="fn">json</span>({ created: <span class="num">true</span> })
+})
