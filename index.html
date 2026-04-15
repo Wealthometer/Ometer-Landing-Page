@@ -130,39 +130,55 @@ app.<span class="fn">listen</span>(<span class="num">3000</span>)<span class="cu
       </div>
     </div>
 
-<!-- PIPELINE -->
-<div style="background:var(--ink2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-  <div class="section">
-    <div class="eyebrow">// How It Works</div>
-    <div class="section-title">Source to execution<br>in four stages.</div>
-    <div class="pipe-grid">
-      <div class="pipe-step">
-        <div class="pipe-n">01</div>
-        <div class="pipe-name">Lexer</div>
-        <p class="pipe-desc">Raw .om source is scanned character-by-character into a typed token stream with precise line and column metadata.</p>
-        <span class="pipe-tag">lexer.ts</span>
-        <div class="pipe-arrow">›</div>
-      </div>
-      <div class="pipe-step">
-        <div class="pipe-n">02</div>
-        <div class="pipe-name">Parser</div>
-        <p class="pipe-desc">A recursive descent parser consumes tokens and produces a fully typed AST — 24 node kinds covering every construct.</p>
-        <span class="pipe-tag">parser.ts + ast.ts</span>
-        <div class="pipe-arrow">›</div>
-      </div>
-      <div class="pipe-step">
-        <div class="pipe-n">03</div>
-        <div class="pipe-name">Compiler</div>
-        <p class="pipe-desc">The AST is walked depth-first and flattened into bytecode Chunk objects — one per function scope. Jump back-patching for loops.</p>
-        <span class="pipe-tag">compiler.ts</span>
-        <div class="pipe-arrow">›</div>
-      </div>
-      <div class="pipe-step">
-        <div class="pipe-n">04</div>
-        <div class="pipe-name">VM</div>
-        <p class="pipe-desc">A stack-based virtual machine executes bytecode with call frames, lexical scopes, native stdlib, and the web framework.</p>
-        <span class="pipe-tag">vm.ts</span>
-        <div class="pipe-arrow">›</div>
+    <!-- FEATURES -->
+    <div class="features-wrap z1">
+      <div class="section">
+        <div class="eyebrow">// Why Ometer</div>
+        <div class="section-title">Everything built-in.<br>Nothing bolted on.</div>
+        <div class="features-grid">
+          <div class="feat">
+            <div class="feat-n">01</div>
+            <span class="feat-icon">⚡</span>
+            <h3>Custom VM</h3>
+            <p>Compiles to bytecode, runs on its own stack-based virtual machine. 36 opcodes, call frames, lexical scope
+              chains.</p>
+          </div>
+          <div class="feat">
+            <div class="feat-n">02</div>
+            <span class="feat-icon">🌐</span>
+            <h3>Web Framework</h3>
+            <p>HTTP server, routing with URL params, middleware chain, JSON responses — all first-class, zero npm
+              installs.</p>
+          </div>
+          <div class="feat">
+            <div class="feat-n">03</div>
+            <span class="feat-icon">🔥</span>
+            <h3>Dynamic Typing</h3>
+            <p>No annotations, no interfaces. Strings, numbers, bools, arrays, objects, and functions — all inferred at
+              runtime.</p>
+          </div>
+          <div class="feat">
+            <div class="feat-n">04</div>
+            <span class="feat-icon">🧱</span>
+            <h3>Own Syntax</h3>
+            <p>Hand-crafted lexer, recursive descent parser, and AST with 24 typed node kinds. Real .om files, real
+              language.</p>
+          </div>
+          <div class="feat">
+            <div class="feat-n">05</div>
+            <span class="feat-icon">🔬</span>
+            <h3>Debug Pipeline</h3>
+            <p>Inspect every stage: <code>ometer lex</code>, <code>ometer parse</code>, <code>ometer compile</code>.
+              Full transparency, no black boxes.</p>
+          </div>
+          <div class="feat">
+            <div class="feat-n">06</div>
+            <span class="feat-icon">🦾</span>
+            <h3>TypeScript Core</h3>
+            <p>The entire language — lexer, parser, compiler, VM — is written in TypeScript. Typed, readable, hackable
+              from day one.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
