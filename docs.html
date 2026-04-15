@@ -565,3 +565,7 @@ app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span 
 <p>The VM is stack-based with a linked call-frame system. Each function call creates a new <strong>Frame</strong> with its own instruction pointer, value stack, and <strong>Scope</strong>. Scopes are linked-list environments — variable lookup walks up the chain until the global scope.</p>
 <pre><code><span class="cm">// Call frame structure:</span>
 Frame {
+  chunk:  Chunk    <span class="cm">// compiled bytecode</span>
+  ip:     number   <span class="cm">// instruction pointer</span>
+  scope:  Scope    <span class="cm">// linked environment</span>
+  stack:  Value[]  <span class="cm">// value stack</span>
