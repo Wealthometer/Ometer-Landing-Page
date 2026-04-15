@@ -717,3 +717,17 @@ app.<span class="fn">listen</span>(<span class="num">3000</span>)<span class="cu
         <p class="pipe-desc">A recursive descent parser consumes tokens and produces a fully typed AST — 24 node kinds covering every construct.</p>
         <span class="pipe-tag">parser.ts + ast.ts</span>
         <div class="pipe-arrow">›</div>
+      </div>
+      <div class="pipe-step">
+        <div class="pipe-n">03</div>
+        <div class="pipe-name">Compiler</div>
+        <p class="pipe-desc">The AST is walked depth-first and flattened into bytecode Chunk objects — one per function scope. Jump back-patching for loops.</p>
+        <span class="pipe-tag">compiler.ts</span>
+        <div class="pipe-arrow">›</div>
+      </div>
+      <div class="pipe-step">
+        <div class="pipe-n">04</div>
+        <div class="pipe-name">VM</div>
+        <p class="pipe-desc">A stack-based virtual machine executes bytecode with call frames, lexical scopes, native stdlib, and the web framework.</p>
+        <span class="pipe-tag">vm.ts</span>
+        <div class="pipe-arrow">›</div>
