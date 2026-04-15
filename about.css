@@ -167,3 +167,50 @@ nav.stuck {
   font-size: 1.05rem;
   line-height: 1.8;
   margin-top: 24px;
+  max-width: 480px;
+}
+.ah-meta {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.meta-item {
+}
+.meta-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.62rem;
+  color: var(--slate);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.meta-val {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.6rem;
+  color: var(--lime);
+  letter-spacing: 0.04em;
+}
+
+/* TECH STACK VISUAL */
+.stack-visual {
+  position: relative;
+}
+.stack-box {
+  background: var(--ink2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+.stack-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.stack-row:last-child {
+  border-bottom: none;
