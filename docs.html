@@ -542,3 +542,10 @@ app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span 
   <div class="op-card"><div class="op-name">PUSH</div><div class="op-args">&lt;value&gt;</div><div class="op-desc">Push constant onto stack</div></div>
   <div class="op-card"><div class="op-name">POP</div><div class="op-desc">Discard top of stack</div></div>
   <div class="op-card"><div class="op-name">DUP</div><div class="op-desc">Duplicate top of stack</div></div>
+  <div class="op-card"><div class="op-name">LOAD / STORE / DEFINE</div><div class="op-args">&lt;name&gt;</div><div class="op-desc">Variable read, write, declare</div></div>
+  <div class="op-card"><div class="op-name">ADD / SUB / MUL / DIV</div><div class="op-desc">Binary arithmetic</div></div>
+  <div class="op-card"><div class="op-name">MOD / POW / NEG / NOT</div><div class="op-desc">Modulo, power, unary operators</div></div>
+  <div class="op-card"><div class="op-name">EQ / NEQ / LT / GT / LTE / GTE</div><div class="op-desc">Comparison — pushes bool result</div></div>
+  <div class="op-card"><div class="op-name">JUMP</div><div class="op-args">&lt;idx&gt;</div><div class="op-desc">Unconditional jump</div></div>
+  <div class="op-card"><div class="op-name">JUMP_IF_FALSE</div><div class="op-args">&lt;idx&gt;</div><div class="op-desc">Jump if top of stack is falsy</div></div>
+  <div class="op-card"><div class="op-name">JUMP_IF_TRUE</div><div class="op-args">&lt;idx&gt;</div><div class="op-desc">Used for short-circuit ||</div></div>
