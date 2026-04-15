@@ -558,3 +558,10 @@ app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span 
   <div class="op-card"><div class="op-name">GET_INDEX / SET_INDEX</div><div class="op-desc">Bracket access on arrays/objects</div></div>
   <div class="op-card"><div class="op-name">ITER_INIT / ITER_NEXT</div><div class="op-desc">for-in loop iteration</div></div>
   <div class="op-card"><div class="op-name">PRINT</div><div class="op-desc">Pop and write to stdout</div></div>
+  <div class="op-card"><div class="op-name">IMPORT</div><div class="op-args">&lt;module&gt;</div><div class="op-desc">Load stdlib module onto stack</div></div>
+</div>
+
+<h2 id="vm-detail">VM Architecture</h2>
+<p>The VM is stack-based with a linked call-frame system. Each function call creates a new <strong>Frame</strong> with its own instruction pointer, value stack, and <strong>Scope</strong>. Scopes are linked-list environments — variable lookup walks up the chain until the global scope.</p>
+<pre><code><span class="cm">// Call frame structure:</span>
+Frame {
