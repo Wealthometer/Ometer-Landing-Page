@@ -49,3 +49,16 @@ body::before {
 }
 
 .z1 { position: relative; z-index: 1; }
+
+/* ─── NAV ──────────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  height: 58px;
+  display: flex; align-items: center;
+  padding: 0 48px;
+  border-bottom: 1px solid transparent;
+  transition: background .3s, border-color .3s;
+}
+nav.stuck {
+  background: rgba(8,9,12,.92);
+  backdrop-filter: blur(16px);
