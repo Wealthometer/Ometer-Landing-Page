@@ -167,14 +167,18 @@ STRING     "Ometer"  L1:13</pre>
         </div>
       </div>
 
-  <!-- CHAPTER 2 -->
-  <div class="chapter">
-    <div class="ch-num">02</div>
-    <div class="ch-content">
-      <h3>The Parser & AST</h3>
-      <p>With tokens in hand, the parser in <strong>parser.ts</strong> builds an Abstract Syntax Tree. The grammar is implemented as a hand-written recursive descent parser — each grammar rule maps to exactly one method.</p>
-      <p>The AST is defined in <strong>ast.ts</strong> as a TypeScript discriminated union of <strong>24 typed node interfaces</strong>. Every node carries a <code>kind</code> discriminator and a <code>line</code> number. The compiler can safely switch on <code>node.kind</code> with full type inference.</p>
-      <pre><span class="cm">// fn add(a, b) { return a + b } becomes:</span>
+      <!-- CHAPTER 2 -->
+      <div class="chapter">
+        <div class="ch-num">02</div>
+        <div class="ch-content">
+          <h3>The Parser & AST</h3>
+          <p>With tokens in hand, the parser in <strong>parser.ts</strong> builds an Abstract Syntax Tree. The grammar
+            is implemented as a hand-written recursive descent parser — each grammar rule maps to exactly one method.
+          </p>
+          <p>The AST is defined in <strong>ast.ts</strong> as a TypeScript discriminated union of <strong>24 typed node
+              interfaces</strong>. Every node carries a <code>kind</code> discriminator and a <code>line</code> number.
+            The compiler can safely switch on <code>node.kind</code> with full type inference.</p>
+          <pre><span class="cm">// fn add(a, b) { return a + b } becomes:</span>
 {
   kind: <span class="str">"FnDecl"</span>, name: <span class="str">"add"</span>,
   params: [<span class="str">"a"</span>, <span class="str">"b"</span>],
