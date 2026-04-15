@@ -606,3 +606,18 @@ footer p { font-family: 'DM Mono', monospace; font-size: .68rem; color: var(--sl
 
 <span class="kw">let</span> app = web.<span class="fn">create</span>()
 
+app.<span class="fn">use</span>(<span class="kw">fn</span>(req, res, next) {
+  <span class="fn">print</span>(req.<span class="pr">method</span> + <span class="str">" "</span> + req.<span class="pr">path</span>)
+  <span class="fn">next</span>()
+})
+
+app.<span class="fn">get</span>(<span class="str">"/"</span>, <span class="kw">fn</span>(req, res) {
+  res.<span class="fn">send</span>(<span class="str">"Hello from Ometer"</span>)
+})
+
+app.<span class="fn">post</span>(<span class="str">"/api/users"</span>, <span class="kw">fn</span>(req, res) {
+  <span class="kw">let</span> body = req.<span class="pr">body</span>
+  res.<span class="fn">json</span>({
+    created: <span class="num">true</span>,
+    name: body.<span class="pr">name</span>
+  })
