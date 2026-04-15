@@ -283,3 +283,30 @@ pre code {
   color: var(--slate);
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+.kw {
+  color: #c792ea;
+}
+.fn {
+  color: #82aaff;
+}
+.str {
+  color: #c3e88d;
+}
+.num {
+  color: #f78c6c;
+}
+.cm {
+  color: #3a4a5a;
+  font-style: italic;
+}
+.op {
+  color: var(--lime);
+}
+.pr {
+  color: #89ddff;
+}
+
+ul,
+ol {
+  color: var(--slate);
