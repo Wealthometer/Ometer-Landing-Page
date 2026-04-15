@@ -332,3 +332,39 @@ li {
   background: rgba(255, 209, 102, 0.04);
 }
 .callout p {
+  margin: 0;
+}
+.callout-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.62rem;
+  color: var(--lime);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 6px;
+}
+.callout.warn .callout-label {
+  color: #ffd166;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.83rem;
+}
+th {
+  font-family: "DM Mono", monospace;
+  font-size: 0.64rem;
+  text-align: left;
+  padding: 10px 14px;
+  background: var(--ink3);
+  color: var(--lime);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--border);
+}
+td {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border);
