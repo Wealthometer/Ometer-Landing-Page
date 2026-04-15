@@ -57,3 +57,16 @@ body{background:var(--ink);color:var(--white);font-family:'DM Sans',sans-serif;f
   text-transform:uppercase;letter-spacing:.12em;
   color:var(--lime);
   padding:16px 8px 6px;
+  border-top:1px solid var(--border);
+  margin-top:4px;
+}
+.sb-group:first-child .sb-heading{border-top:none;margin-top:0}
+.sb-link{
+  display:block;
+  font-family:'DM Mono',monospace;font-size:.72rem;
+  color:var(--slate);text-decoration:none;
+  padding:5px 8px;border-radius:2px;
+  transition:all .15s;letter-spacing:.02em;
+  margin-bottom:1px;
+}
+.sb-link:hover,.sb-link.on{background:var(--ink3);color:var(--white)}
