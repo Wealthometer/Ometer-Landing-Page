@@ -825,3 +825,28 @@
    
     @media(max-width:960px) {
       nav {
+        padding: 0 24px;
+      }
+
+      .nav-center {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 110px 24px 60px;
+      }
+
+      .code-panel {
+        display: none;
+      }
+
+      .section {
+        padding: 64px 24px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .pipe-grid {
