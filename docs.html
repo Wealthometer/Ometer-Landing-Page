@@ -640,3 +640,10 @@ primary       → NUMBER | STRING | BOOL | NULL | IDENT
 </main>
 </div>
 
+<script>
+const links = document.querySelectorAll('.sb-link');
+const headings = document.querySelectorAll('h2[id],h3[id]');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(l => l.classList.remove('on'));
