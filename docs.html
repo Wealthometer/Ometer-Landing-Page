@@ -493,3 +493,8 @@ app.<span class="fn">put</span>(<span class="str">"/users/:id"</span>, <span cla
   res.<span class="fn">json</span>({ updated: id })
 })
 
+app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span class="kw">fn</span>(req, res) {
+  res.<span class="fn">json</span>({ deleted: req.<span class="pr">params</span>.<span class="pr">id</span> })
+})</code></pre>
+
+<h2 id="middleware">Middleware</h2>
