@@ -271,3 +271,13 @@ nav.stuck {
 }
 .big-title {
   font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+  margin-bottom: 20px;
+}
+.body-text {
+  color: var(--slate);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  max-width: 680px;
