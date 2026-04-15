@@ -449,3 +449,45 @@ nav.stuck {
 }
 .file-size {
   font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  color: var(--slate);
+  flex: 0 0 60px;
+}
+.file-desc {
+  font-size: 0.83rem;
+  color: var(--slate);
+}
+
+/* PRINCIPLES */
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin: 24px 0;
+}
+.p-card {
+  background: var(--ink2);
+  border: 1px solid var(--border);
+  padding: 28px 22px;
+}
+.p-n {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5rem;
+  color: var(--lime-d);
+  margin-bottom: 10px;
+}
+.p-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+  color: var(--lime);
+}
+.p-text {
+  color: var(--slate);
+  font-size: 0.83rem;
+  line-height: 1.7;
+}
+
+/* CTA */
+.cta {
