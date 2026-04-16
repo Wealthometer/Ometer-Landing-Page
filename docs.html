@@ -14,14 +14,11 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./docs.css">
-  <style>
 
-  </style>
 </head>
 
 <body>
 
-  <!-- TOPBAR -->
   <header class="topbar">
     <a href="index.html" class="topbar-logo">OM<b>ETER</b></a>
     <span class="topbar-sep">/</span>
@@ -36,7 +33,6 @@
 
   <div class="layout">
 
-    <!-- SIDEBAR -->
     <aside class="sb">
       <div class="sb-version">v0.1.0 — stable</div>
       <div class="sb-group">
@@ -82,7 +78,6 @@
       </div>
     </aside>
 
-    <!-- MAIN -->
     <main class="content">
 
       <div class="doc-hero" id="intro">
@@ -92,7 +87,6 @@
           its own virtual machine — built entirely in TypeScript.</p>
       </div>
 
-      <!-- INSTALL -->
       <h2 id="install">Installation</h2>
       <p>Ometer requires <strong>Node.js 18+</strong>. No global installs needed — everything runs through
         <code>ts-node</code>.
@@ -106,7 +100,6 @@ npm install
 <span class="cm"># Verify</span>
 npx ts-node src/cli.ts help</code></pre>
 
-      <!-- HELLO -->
       <h2 id="hello">Hello World</h2>
       <pre><span class="pre-lang">hello.om</span><code><span class="kw">fn</span> <span class="fn">greet</span>(name) {
   <span class="kw">return</span> <span class="str">"Hello, "</span> + name + <span class="str">"!"</span>
@@ -116,7 +109,6 @@ npx ts-node src/cli.ts help</code></pre>
       <pre><span class="pre-lang">terminal</span><code>npx ts-node src/cli.ts run hello.om
 <span class="cm">→ Hello, World!</span></code></pre>
 
-      <!-- CLI -->
       <h2 id="cli">CLI Reference</h2>
       <table>
         <tr>
@@ -147,7 +139,6 @@ npx ts-node src/cli.ts help</code></pre>
 
       <hr>
 
-      <!-- SYNTAX -->
       <h2 id="syntax">Syntax Overview</h2>
       <p>Ometer uses curly-brace blocks, C-style operators, and its own keyword set. Files use the <code>.om</code>
         extension. Comments use <code>//</code> or <code>/* */</code>.</p>
@@ -160,7 +151,6 @@ npx ts-node src/cli.ts help</code></pre>
 <span class="kw">let</span> active = <span class="num">true</span>
 <span class="kw">let</span> nothing = <span class="kw">null</span></code></pre>
 
-      <!-- VARIABLES -->
       <h2 id="variables">Variables</h2>
       <p>Declared with <code>let</code>. Dynamically typed — can hold any value and be reassigned to a different type.
       </p>
@@ -173,7 +163,6 @@ count -= <span class="num">1</span>   <span class="cm">// 0</span>
 count *= <span class="num">3</span>   <span class="cm">// 0</span>
 count /= <span class="num">2</span>   <span class="cm">// 0</span></code></pre>
 
-      <!-- TYPES -->
       <h2 id="types">Types</h2>
       <table>
         <tr>
@@ -218,7 +207,6 @@ count /= <span class="num">2</span>   <span class="cm">// 0</span></code></pre>
         </tr>
       </table>
 
-      <!-- OPERATORS -->
       <h2 id="operators">Operators</h2>
       <h3>Arithmetic</h3>
       <pre><code>x + y   <span class="cm">// add / string concatenation</span>
@@ -236,7 +224,6 @@ x &lt; y    x &gt; y    x &lt;= y    x &gt;= y    <span class="cm">// comparison
 x || y   <span class="cm">// OR  — short-circuits, returns actual value</span>
 !x       <span class="cm">// NOT</span></code></pre>
 
-      <!-- CONTROL FLOW -->
       <h2 id="control">Control Flow</h2>
       <h3>if / else if / else</h3>
       <pre><code><span class="kw">if</span> (score >= <span class="num">90</span>) {
@@ -269,7 +256,6 @@ x || y   <span class="cm">// OR  — short-circuits, returns actual value</span>
   <span class="kw">if</span> (skip) { <span class="kw">continue</span> }
 }</code></pre>
 
-      <!-- FUNCTIONS -->
       <h2 id="functions">Functions</h2>
       <p>Functions are first-class values. Named with <code>fn name(params)</code> or anonymous as expressions.</p>
       <pre><code><span class="cm">// Named declaration</span>
@@ -295,7 +281,6 @@ x || y   <span class="cm">// OR  — short-circuits, returns actual value</span>
 <span class="fn">print</span>(<span class="fn">c</span>())  <span class="cm">// 1</span>
 <span class="fn">print</span>(<span class="fn">c</span>())  <span class="cm">// 2</span></code></pre>
 
-      <!-- ARRAYS -->
       <h2 id="arrays">Arrays</h2>
       <pre><code><span class="kw">let</span> nums = [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>]
 
@@ -310,7 +295,6 @@ nums.<span class="fn">reverse</span>()
 <span class="kw">let</span> found = nums.<span class="fn">includes</span>(<span class="num">2</span>)
 <span class="kw">let</span> part = nums.<span class="fn">slice</span>(<span class="num">0</span>, <span class="num">2</span>)</code></pre>
 
-      <!-- OBJECTS -->
       <h2 id="objects">Objects</h2>
       <pre><code><span class="kw">let</span> user = {
   name: <span class="str">"Ometer"</span>,
@@ -324,13 +308,11 @@ nums.<span class="fn">reverse</span>()
 user.<span class="pr">active</span> = <span class="num">false</span>
 user[<span class="str">"score"</span>] = <span class="num">99</span></code></pre>
 
-      <!-- IMPORTS -->
       <h2 id="imports">Imports</h2>
       <pre><code><span class="kw">import</span> web   <span class="cm">// loads the web stdlib module</span>
 
 <span class="kw">let</span> app = web.<span class="fn">create</span>()</code></pre>
 
-      <!-- BUILTINS -->
       <h2 id="builtins">Built-in Modules</h2>
       <h3>math</h3>
       <pre><code><span class="fn">print</span>(math.<span class="fn">floor</span>(<span class="num">3.7</span>))   <span class="cm">// 3</span>
@@ -355,7 +337,6 @@ s.<span class="pr">length</span>        <span class="cm">// 12</span></code></pr
 
       <hr>
 
-      <!-- WEB -->
       <h2 id="web">web.create()</h2>
       <p>Creates and returns a new Ometer web application. Must <code>import web</code> first.</p>
       <pre><code><span class="kw">import</span> web
@@ -464,7 +445,6 @@ app.<span class="fn">delete</span>(<span class="str">"/users/:id"</span>, <span 
 
       <hr>
 
-      <!-- INTERNALS -->
       <h2 id="pipeline">Compilation Pipeline</h2>
       <pre><code>.om source → Lexer → Tokens → Parser → AST → Compiler → Bytecode → VM → Output</code></pre>
       <p>Each stage is inspectable via the CLI debug commands. The pipeline is strictly linear — no optimization passes

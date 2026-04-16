@@ -406,7 +406,7 @@
       color: #89DDFF;
     }
 
-    /* Typing cursor blink */
+
     .cursor-blink::after {
       content: '▋';
       color: var(--lime);
