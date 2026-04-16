@@ -567,6 +567,16 @@ footer p {
     padding: 0 24px;
   }
   .nav-c {
+    position: static;
+    display: flex;
+    gap: 16px;
+    transform: none;
+    margin-left: auto;
+  }
+  .nav-c a {
+    font-size: 0.65rem;
+  }
+  .nav-r {
     display: none;
   }
   .about-hero {

@@ -829,6 +829,18 @@
       }
 
       .nav-center {
+        position: static;
+        display: flex;
+        gap: 16px;
+        transform: none;
+        margin-left: auto;
+      }
+
+      .nav-center a {
+        font-size: .65rem;
+      }
+
+      .nav-right {
         display: none;
       }
 

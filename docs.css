@@ -32,7 +32,7 @@ body {
 }
 
 .topbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -87,17 +87,15 @@ body {
 
 .layout {
   display: flex;
-  padding-top: 56px;
   flex: 1;
 }
 
 .sb {
   width: var(--sb);
   flex-shrink: 0;
-  position: fixed;
-  top: 56px;
-  left: 0;
-  bottom: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
   overflow-y: auto;
   background: var(--ink2);
   border-right: 1px solid var(--border);
