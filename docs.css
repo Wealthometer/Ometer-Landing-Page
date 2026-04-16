@@ -31,7 +31,6 @@ body {
   min-height: 100vh;
 }
 
-/* NAV */
 .topbar {
   position: fixed;
   top: 0;
@@ -86,14 +85,12 @@ body {
   color: var(--lime);
 }
 
-/* LAYOUT */
 .layout {
   display: flex;
   padding-top: 56px;
   flex: 1;
 }
 
-/* SIDEBAR */
 .sb {
   width: var(--sb);
   flex-shrink: 0;
@@ -164,7 +161,6 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* CONTENT */
 .content {
   margin-left: var(--sb);
   flex: 1;
@@ -172,7 +168,6 @@ body {
   max-width: 900px;
 }
 
-/* TYPOGRAPHY */
 .doc-hero {
   padding-bottom: 36px;
   border-bottom: 1px solid var(--border);
@@ -319,7 +314,6 @@ li {
   margin-bottom: 3px;
 }
 
-/* CALLOUT */
 .callout {
   border-left: 3px solid var(--lime);
   background: rgba(212, 255, 0, 0.04);
@@ -347,7 +341,6 @@ li {
   color: #ffd166;
 }
 
-/* TABLE */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -387,7 +380,6 @@ hr {
   margin: 40px 0;
 }
 
-/* OPCODE GRID */
 .op-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
